@@ -28,7 +28,7 @@ const Navbar = () => {
   return (
     <nav
       className={`fixed md:top-0 top-0  left-[80%] md:left-[37%]    z-50 transition-colors duration-300 my-2 rounded-3xl ${
-        isWhiteBackground ? "bg-[#ffffffd4] bg-opacity-50" : isScrolled ? "bg-[#ffffffd4] bg-opacity-50" : "bg-transparent"
+        isWhiteBackground ? "bg-[#ffffffd4] bg-opacity-50" : isScrolled ? "bg-[#ffffffd4] bg-opacity-50" : "bg-[#000000ba]"
       }`}
     >
       <div className={`flex justify-between items-center px-10 py-2  ${isWhiteBackground ? "text-black" : isScrolled ? "text-black" : "text-white"}`}>
