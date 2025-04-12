@@ -1,0 +1,5 @@
+@media (min-width: 400px) and (max-width: 640px) {
+  .humburgerIcon {
+    left: 80% !important;
+  }
+}
