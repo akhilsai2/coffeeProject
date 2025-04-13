@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useEffect, useState, useRef } from "react";
+import ProductPage from "./product/product";
 
 export default function Home() {
   const [animateLeftCard, setAnimateLeftCard] = useState(false);
@@ -154,6 +155,7 @@ export default function Home() {
           </div>
         </div>
       </div>
+        <ProductPage/>
     </>
   );
 }
