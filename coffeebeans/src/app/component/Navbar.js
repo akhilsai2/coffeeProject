@@ -48,13 +48,13 @@ const Navbar = () => {
           </span>
           <span
             className="cursor-pointer hover:underline hover:underline-offset-2 hover:decoration-orange-500 hover:decoration-2 text-lg font-medium tracking-wide"
-            onClick={() => router.push("/product")}
+            onClick={() => router.push("/productsDetails")}
           >
             Product
           </span>
           <span
             className="cursor-pointer hover:underline hover:underline-offset-2 hover:decoration-orange-500 hover:decoration-2 text-lg font-medium tracking-wide"
-            onClick={() => router.push("/contact")}
+            onClick={() => router.push("/contactus")}
           >
             Contact Us
           </span>

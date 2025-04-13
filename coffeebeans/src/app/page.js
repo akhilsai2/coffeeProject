@@ -2,6 +2,7 @@
 
 import React, { useEffect, useState, useRef } from "react";
 import ProductPage from "./product/product";
+import Gelleryimgs from "./gallerySection/galleryimgs";
 
 export default function Home() {
   const [animateLeftCard, setAnimateLeftCard] = useState(false);
@@ -155,7 +156,11 @@ export default function Home() {
           </div>
         </div>
       </div>
+      <div>
+
         <ProductPage/>
+      </div>
+        <Gelleryimgs/>
     </>
   );
 }
