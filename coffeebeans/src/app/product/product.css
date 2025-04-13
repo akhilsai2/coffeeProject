@@ -15,15 +15,12 @@
     box-sizing: border-box;
 }
 
-body,
-h2,
-p {
-    margin: 0;
-}
+
+
 
 body {
     display: grid;
-    place-items: center;
+    /* place-items: center; */
     height: 100vh;
     font-family: var(--font-text);
 }
@@ -40,7 +37,7 @@ body {
     place-items: center;
     width: 80vw;
     max-width: 21.875rem;
-    height: 28.125rem;
+    height: 25.125rem;
     overflow: hidden;
     border-radius: 0.625rem;
     box-shadow: 0.25rem 0.25rem 0.5rem rgba(0, 0, 0, 0.25);
@@ -48,7 +45,8 @@ body {
     margin: 10;
 }
 .card__description{
-    line-height: 2px;
+    line-height: 0px;
+    font-size: 12px;
 }
 .card>* {
     grid-column: 1 / 2;
@@ -99,17 +97,17 @@ body {
     background-position: center;
     flex-wrap: wrap;
     justify-content: center;
-    width: 100%;
+    
     margin: 10px;
 }
 
 .card__title::after {
     content: "";
     position: absolute;
-    height: 0.3125rem;
+    height: 0.1125rem;
     width: calc(100% + 1.25rem);
     bottom: calc((1.25rem - 0.5rem) * -1);
-    left: -1.25rem;
+    left: -1.15rem;
     background-color: var(--brand-color);
     opacity: 0;
     transform: scaleX(0);
