@@ -2,7 +2,8 @@
 
 import React, { useEffect, useState, useRef } from "react";
 import ProductPage from "./product/product";
-import Gelleryimgs from "./gallerySection/galleryimgs";
+// import Gelleryimgs from "./gallerySection/page";
+import AlwaysOpenExample from "./faq/FAQ";
 
 export default function Home() {
   const [animateLeftCard, setAnimateLeftCard] = useState(false);
@@ -160,7 +161,8 @@ export default function Home() {
 
         <ProductPage/>
       </div>
-        <Gelleryimgs/>
+      <AlwaysOpenExample/>
+        {/* <Gelleryimgs/> */}
     </>
   );
 }

@@ -18,15 +18,15 @@ export default function ContactUsPage() {
       <div className="flex-1 space-y-16 mb-12 md:mb-0">
         {/* Visakhapatnam Office */}
         <div>
-          <h3 className="text-lg font-bold uppercase tracking-wider text-gray-900 mb-4">
+          <h3 className="text-2xl font-bold uppercase tracking-wider text-gray-900 mb-4 underline underline-offset-5 decoration-4 decoration-[#8f755f]">
             CORPORATE OFFICE
           </h3>
-          <p className="font-medium text-amber-800 mb-2"> Germany</p>
+          {/* <p className="font-medium text-lg text-amber-800 mb-2"> Germany</p> */}
           
-          <p className="text-sm font-medium mb-1">Native araku coffee Pvt Ltd</p>
-          <p className="text-sm mb-1">Ewaldstrasse 90c,</p>
-          <p className="text-sm mb-1">Berlin, Germany</p>
-          <p className="text-sm">12524</p>
+          <p className="text-1xl font-medium mb-1">AGROVERSE INNOVATIONS</p>
+          <p className="text-lg mb-1">Ewaldstrasse 90c,</p>
+          <p className="text-lg mb-1">Berlin, Germany</p>
+          <p className="text-lg">12524</p>
         </div>
 
         {/* Hyderabad Office */}
@@ -52,12 +52,12 @@ export default function ContactUsPage() {
       </div>
 
       {/* Right Column - Contact Form */}
-      <div className="flex-1 bg-black p-6 text-white">
+      <div className="flex-1 bg-black p-6 text-white rounded-lg">
         <div className="border border-white p-6 max-w-md mx-auto">
           <form className="space-y-6">
             {/* Name Field */}
             <div>
-              <label htmlFor="name" className="block text-sm mb-1">Your name</label>
+              <label htmlFor="name" className="block text-xl mb-1">Your name</label>
               <input
                 type="text"
                 id="name"
@@ -67,7 +67,7 @@ export default function ContactUsPage() {
 
             {/* Email Field */}
             <div>
-              <label htmlFor="email" className="block text-sm mb-1">Your email</label>
+              <label htmlFor="email" className="block text-xl mb-1">Your email</label>
               <input
                 type="email"
                 id="email"
@@ -77,7 +77,7 @@ export default function ContactUsPage() {
 
             {/* Subject Field */}
             <div>
-              <label htmlFor="subject" className="block text-sm mb-1">Phone Number</label>
+              <label htmlFor="subject" className="block text-xl mb-1">Phone Number</label>
               <input
                 type="number"
                 id="subject"
@@ -87,7 +87,7 @@ export default function ContactUsPage() {
 
             {/* Message Field */}
             <div>
-              <label htmlFor="message" className="block text-sm mb-1">Your message (optional)</label>
+              <label htmlFor="message" className="block text-xl mb-1">Your message (optional)</label>
               <textarea
                 id="message"
                 rows={3}
@@ -99,7 +99,7 @@ export default function ContactUsPage() {
             <div className="pt-4">
               <button
                 // type="submit"
-                className="bg-white text-black uppercase font-medium text-sm py-2 px-8 hover:bg-gray-200 transition-colors"
+                className="bg-white text-black uppercase font-medium text-xl py-2 px-8 hover:bg-gray-200 transition-colors"
               >
                 SUBMIT
               </button>
