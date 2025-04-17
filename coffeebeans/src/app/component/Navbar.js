@@ -1,8 +1,7 @@
 "use client";
 import React, { useState, useEffect } from "react";
 import { useRouter, usePathname } from "next/navigation";
-import "./nav.css"
-
+import "./nav.css";
 
 const Navbar = () => {
   const router = useRouter();
@@ -28,32 +27,57 @@ const Navbar = () => {
   return (
     <nav
       className={`fixed md:top-0 top-0  left-[80%] md:left-[37%]    z-50 transition-colors duration-300 my-2 rounded-3xl ${
-        isWhiteBackground ? "bg-[#ffffffd4] bg-opacity-50" : isScrolled ? "bg-[#ffffffd4] bg-opacity-50" : "bg-[#000000ba]"
+        isWhiteBackground
+          ? "bg-[#000000] "
+          : isScrolled
+          ? "bg-[#000000]"
+          : "bg-[#000000ba]"
       }`}
     >
-      <div className={`flex justify-between items-center px-10 py-2  ${isWhiteBackground ? "text-black" : isScrolled ? "text-black" : "text-white"}`}>
+      <div
+        className={`flex justify-between items-center px-10 py-2 text-white`}
+      >
         {/* Logo */}
         <div></div>
 
         {/* Desktop Navigation Links */}
         <div className="hidden md:flex gap-15">
-          <span className="cursor-pointer hover:underline  hover:underline-offset-2 hover:decoration-orange-500 hover:decoration-2 text-lg font-medium tracking-wide " onClick={() => router.push("/")}>
+          <span
+            className={`cursor-pointer text-lg font-medium tracking-wide ${
+              pathname === "/"
+                ? "bg-white rounded-xl px-10   text-black"
+                : "text-white"
+            }`}
+            onClick={() => router.push("/")}
+          >
             Home
           </span>
           <span
-            className="cursor-pointer hover:underline hover:underline-offset-2 hover:decoration-orange-500 hover:decoration-2 text-lg font-medium tracking-wide"
+            className={`cursor-pointer text-lg font-medium tracking-wide ${
+              pathname === "/about"
+                ? "bg-white rounded-xl px-10   text-black"
+                : "text-white"
+            }`}
             onClick={() => router.push("/about")}
           >
             About
           </span>
           <span
-            className="cursor-pointer hover:underline hover:underline-offset-2 hover:decoration-orange-500 hover:decoration-2 text-lg font-medium tracking-wide"
+            className={`cursor-pointer text-lg font-medium tracking-wide ${
+              pathname === "/productDetails"
+                ? "bg-white rounded-xl px-10   text-black"
+                : "text-white"
+            }`}
             onClick={() => router.push("/productsDetails")}
           >
             Product
           </span>
           <span
-            className="cursor-pointer hover:underline hover:underline-offset-2 hover:decoration-orange-500 hover:decoration-2 text-lg font-medium tracking-wide"
+            className={`cursor-pointer text-lg font-medium tracking-wide ${
+              pathname === "/contactus"
+                ? "bg-white rounded-xl px-10   text-black"
+                : "text-white"
+            }`}
             onClick={() => router.push("/contactus")}
           >
             Contact Us
@@ -67,7 +91,10 @@ const Navbar = () => {
         </button> */}
 
         {/* Hamburger Menu (Visible on Mobile) */}
-        <div className="md:hidden cursor-pointer" onClick={() => setIsMenuOpen(!isMenuOpen)}>
+        <div
+          className="md:hidden cursor-pointer"
+          onClick={() => setIsMenuOpen(!isMenuOpen)}
+        >
           <div className="w-6 h-1 bg-white mb-1"></div>
           <div className="w-6 h-1 bg-white mb-1"></div>
           <div className="w-6 h-1 bg-white"></div>
@@ -77,7 +104,10 @@ const Navbar = () => {
       {/* Mobile Side Drawer */}
       {isMenuOpen && (
         <div className="fixed top-0 left-0 w-1/2 h-full bg-white bg-opacity-90 text-black z-50 p-6">
-          <button className="text-black text-2xl absolute top-4 right-4" onClick={() => setIsMenuOpen(false)}>
+          <button
+            className="text-black text-2xl absolute top-4 right-4"
+            onClick={() => setIsMenuOpen(false)}
+          >
             &times;
           </button>
           <div className="flex flex-col gap-6 mt-12">

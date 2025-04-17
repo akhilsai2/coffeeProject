@@ -4,6 +4,95 @@ import React, { useEffect, useState, useRef } from "react";
 import ProductPage from "./product/product";
 // import Gelleryimgs from "./gallerySection/page";
 import AlwaysOpenExample from "./faq/FAQ";
+import {
+  VerticalTimeline,
+  VerticalTimelineElement,
+} from "react-vertical-timeline-component";
+import "react-vertical-timeline-component/style.min.css";
+import {
+  FaSeedling,
+  FaUniversity,
+  FaRocket,
+  FaGlobe,
+  FaLeaf,
+  FaRecycle,
+  FaHandsHelping,
+  FaComments,
+} from "react-icons/fa";
+import { useInView } from "react-intersection-observer";
+import FooterSection from "./footer/fooeter";
+
+function AnimatedTimelineElement({
+  date,
+  icon,
+  title,
+  content,
+  isLeft,
+  image,
+}) {
+  const { ref, inView } = useInView({
+    triggerOnce: false, // Trigger animation only once
+    threshold: 0.2, // Trigger when 20% of the element is visible
+  });
+
+  return (
+    <div
+      ref={ref}
+      className={`transition-transform duration-700 ${
+        inView
+          ? "translate-x-0 opacity-100"
+          : isLeft
+          ? "-translate-x-10 opacity-0"
+          : "translate-x-10 opacity-0"
+      }`}
+    >
+      <VerticalTimelineElement
+        className="vertical-timeline-element--work"
+        contentStyle={{
+          background: "#f9f9f9",
+          color: "#333",
+          marginBottom: "20px",
+          boxShadow: "0 4px 10px rgba(0, 0, 0, 0.4)",
+          display: "flex",
+          flexDirection: isLeft ? "row" : "row-reverse",
+          justifyContent: "space-between", // Alternate image and content sides
+          alignItems: "start",
+          borderRadius: "10px",
+          gap: "10px",
+        }}
+        contentArrowStyle={{
+          borderRight: isLeft ? "7px solid #4caf50" : "7px solid #4caf50",
+        }}
+        date={date}
+        dateClassName="text-lg font-bold text-green-800 "
+        iconStyle={{ background: "#4caf50", color: "#fff" }}
+        icon={icon}
+        position={isLeft ? "left" : "right"} // Alternate position
+      >
+        {/* Image */}
+        {image && (
+          <div className="w-1/2 md:w-1/4 p-1">
+            <img
+              src={image}
+              alt={title}
+              className="w-full h-auto rounded-lg shadow-md"
+            />
+          </div>
+        )}
+
+        {/* Content */}
+        <div className="w-1/2 md:w-2/4 p-0 text-left flex flex-col justify-center">
+          <h3 className="vertical-timeline-element-title text-md md:text-2xl font-semibold text-green-800">
+            {title}
+          </h3>
+          <p className="text-gray-700  text-[2px] md:text-2xl italic">
+            {content}
+          </p>
+        </div>
+      </VerticalTimelineElement>
+    </div>
+  );
+}
 
 export default function Home() {
   const [animateLeftCard, setAnimateLeftCard] = useState(false);
@@ -13,7 +102,6 @@ export default function Home() {
   const [animate, setAnimate] = useState(false);
 
   useEffect(() => {
-
     setTimeout(() => setAnimate(true), 500);
   }, []);
 
@@ -34,11 +122,11 @@ export default function Home() {
       },
       { threshold: 0.2 }
     );
-  
+
     if (sectionRef.current) {
       observer.observe(sectionRef.current);
     }
-  
+
     return () => {
       if (sectionRef.current) {
         observer.unobserve(sectionRef.current);
@@ -48,8 +136,7 @@ export default function Home() {
   return (
     <>
       <div className="relative text-center">
-
-         <div className="absolute top-4 left-4 z-10">
+        <div className="absolute top-4 left-4 z-10">
           <img
             src="/assets/logo86.png" // Replace with the path to your logo file
             alt="CoffeeLogo"
@@ -59,7 +146,12 @@ export default function Home() {
         </div>
 
         <div className="relative w-full h-0 pb-[56.25%] overflow-hidden">
-          <video className="absolute top-0 left-0 w-full h-full object-cover" autoPlay loop muted>
+          <video
+            className="absolute top-0 left-0 w-full h-full object-cover"
+            autoPlay
+            loop
+            muted
+          >
             <source src="/assets/homevideo4.mp4" type="video/mp4" />
             Your browser does not support the video tag.
           </video>
@@ -71,9 +163,16 @@ export default function Home() {
             animate ? "opacity-100 scale-100" : "opacity-0 scale-90"
           }`}
         >
-          <h1 className="text-[20px] md:text-[55px] font-extrabold  mb-1 md:mb-4 tracking-wide">AGROVERSE INNOVATIONS</h1>
-          <p className="text-[10px] md:text-xl mb-1 md:mb-6">Grow with Purpose, Connect with Integrity, Transform with Power.</p>
-          <button className="bg-orange-500 text-white px-3 md:px-6 py-1 md:py-3 rounded-lg text-[8px] md:text-lg font-medium hover:bg-orange-600 transition-all" onClick={() => (window.location.href = "/shop")}>
+          <h1 className="text-[20px] md:text-[55px] font-extrabold  mb-1 md:mb-4 tracking-wide">
+            AGROVERSE INNOVATIONS
+          </h1>
+          <p className="text-[10px] md:text-xl mb-1 md:mb-6">
+            Grow with Purpose, Connect with Integrity, Transform with Power.
+          </p>
+          <button
+            className="bg-orange-500 text-white px-3 md:px-6 py-1 md:py-3 rounded-lg text-[8px] md:text-lg font-medium hover:bg-orange-600 transition-all"
+            onClick={() => (window.location.href = "/shop")}
+          >
             Shop Now
           </button>
         </div>
@@ -115,9 +214,7 @@ export default function Home() {
             {/* Image */}
             <div
               className={`w-full md:w-1/3 flex justify-center transition-transform duration-700 ${
-                animateImage
-                  ? "scale-100 opacity-100"
-                  : "scale-90 opacity-0"
+                animateImage ? "scale-100 opacity-100" : "scale-90 opacity-0"
               }`}
             >
               <img
@@ -158,11 +255,138 @@ export default function Home() {
         </div>
       </div>
       <div>
+        <div className="relative text-center">
+          {/* Other sections */}
+          <div>
+            {/* A Journey of AgroVerse Innovations Section */}
+            <div className="bg-[#4caf5033] py-10">
+              <h2 className="text-2xl md:text-5xl font-bold text-center text-green-800 mb-8">
+                A Journey of AgroVerse Innovations
+              </h2>
 
-        <ProductPage/>
+              {/* Vertical Timeline */}
+              <VerticalTimeline layout="horizontal" lineColor="#4caf50">
+                {/* Timeline Item 1 */}
+                <AnimatedTimelineElement
+                  date="2020"
+                  icon={<FaSeedling />}
+                  title="AgroVerse Origins"
+                  content="AgroVerse Innovations was born out of grit, vision, and an unshakable commitment to rewrite the rules of agriculture. Yanala Prudhvi Raj saw the truth behind India’s agricultural struggles while walking through his family farm in Andhra Pradesh."
+                  isLeft={true}
+                  image="/assets/journey1.jpg"
+                />
+
+                {/* Timeline Item 2 */}
+                <AnimatedTimelineElement
+                  date="2021"
+                  icon={<FaUniversity />}
+                  title="Education in Germany"
+                  content="Prudhvi moved to Germany to pursue his Master’s in Industrial Engineering and International Management. From Europe’s innovation ecosystem, he prepared to disrupt outdated agricultural systems."
+                  isLeft={false}
+                  image="/assets/journey2.jpg" // Replace with your image path
+                />
+
+                {/* Timeline Item 3 */}
+                <AnimatedTimelineElement
+                  date="2024"
+                  icon={<FaRocket />}
+                  title="Official Launch"
+                  content="AgroVerse Innovations officially launched as a bold platform to empower farmers and connect ethical producers with conscious global buyers."
+                  isLeft={true}
+                  image="/assets/journey3.jpg"
+                />
+
+                {/* Timeline Item 4 */}
+                <AnimatedTimelineElement
+                  date="Today"
+                  icon={<FaGlobe />}
+                  title="AgroVerse Today"
+                  content="AgroVerse Innovations stands as a force for change, where technology meets tradition and sustainability drives strategy."
+                  isLeft={false}
+                  image="/assets/journey4.jpg"
+                />
+              </VerticalTimeline>
+            </div>
+          </div>
+        </div>
+
+        <ProductPage />
+        <div className="bg-[#4caf5033] py-10 mt-10">
+          <h2 className="text-center text-4xl font-bold mb-8 text-green-800">
+            Why Choose Us
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 px-5 md:px-20 ">
+            {/* Feature 1 */}
+            <div className="bg-white shadow-md rounded-lg p-6 text-center hover:shadow-lg transition">
+              <FaLeaf className="text-green-600 text-5xl mx-auto mb-4" />
+              <h3 className="text-xl font-bold text-gray-800 mb-2">
+                Uncompromised Quality
+              </h3>
+              <p className="text-gray-600">
+                Our coffee beans are handpicked from high-altitude organic farms
+                and scored 84+ by the Specialty Coffee Association (SCA). Every
+                batch undergoes rigorous quality checks to ensure a rich, clean,
+                and unforgettable experience.
+              </p>
+            </div>
+
+            {/* Feature 2 */}
+            <div className="bg-white shadow-md rounded-lg p-6 text-center hover:shadow-lg transition">
+              <FaHandsHelping className="text-green-600 text-5xl mx-auto mb-4" />
+              <h3 className="text-xl font-bold text-gray-800 mb-2">
+                Farmer-First, Always
+              </h3>
+              <p className="text-gray-600">
+                We source directly from tribal farmers, ensuring fair prices
+                without middlemen. By supporting us, you empower farming
+                communities and contribute to a more equitable supply chain.
+              </p>
+            </div>
+
+            {/* Feature 3 */}
+            <div className="bg-white shadow-md rounded-lg p-6 text-center hover:shadow-lg transition">
+              <FaGlobe className="text-green-600 text-5xl mx-auto mb-4" />
+              <h3 className="text-xl font-bold text-gray-800 mb-2">
+                Traceable & Transparent
+              </h3>
+              <p className="text-gray-600">
+                From soil to sip, we offer full transparency. Our traceability
+                system lets you know exactly where your coffee comes from and
+                how it was grown.
+              </p>
+            </div>
+
+            {/* Feature 4 */}
+            <div className="bg-white shadow-md rounded-lg p-6 text-center hover:shadow-lg transition">
+              <FaSeedling className="text-green-600 text-5xl mx-auto mb-4" />
+              <h3 className="text-xl font-bold text-gray-800 mb-2">
+                Sustainably Grown
+              </h3>
+              <p className="text-gray-600">
+                Grown in biodiversity-rich regions using traditional organic
+                methods, our products are free from chemicals and pesticides,
+                making them healthier and planet-friendly.
+              </p>
+            </div>
+
+            {/* Feature 5 */}
+            <div className="bg-white shadow-md rounded-lg p-6 text-center hover:shadow-lg transition">
+              <FaComments className="text-green-600 text-5xl mx-auto mb-4" />
+              <h3 className="text-xl font-bold text-gray-800 mb-2">
+                Customer-Centric Experience
+              </h3>
+              <p className="text-gray-600">
+                From sample requests to bulk orders, we ensure seamless
+                communication and quick responses. We’re here to serve with
+                integrity and care.
+              </p>
+            </div>
+          </div>
+        </div>
       </div>
-      <AlwaysOpenExample/>
-        {/* <Gelleryimgs/> */}
+      <AlwaysOpenExample />
+      {/* <Gelleryimgs/> */}
+      <FooterSection />
     </>
   );
 }
