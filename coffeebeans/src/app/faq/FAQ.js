@@ -76,11 +76,11 @@ export default function AlwaysOpenExample() {
             }}
         >
             <Accordion defaultActiveKey={["0"]} flush>
-                <div className="w-full flex flex-wrap justify-center gap-6 p-6">
+                <div className="w-full flex flex-wrap justify-center rounded gap-6 p-6 ">
                     {faqData.map((item, index) => (
                         <div
                             key={index}
-                            className="w-full sm:w-[600px] flex flex-col"
+                            className="w-full  flex flex-col"
                         >
                             <Accordion.Item
                                 eventKey={item?.id?.toString()}
