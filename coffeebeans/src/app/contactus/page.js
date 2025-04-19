@@ -16,7 +16,6 @@ export default function ContactUsPage() {
       })
       .then(
         () => {
-          console.log('SUCCESS!');
           setSuccessMessage(true);
           form.current.reset();
           setTimeout(() => {
@@ -34,6 +33,7 @@ export default function ContactUsPage() {
       {/* Top Parallax (short height, no background on heading) */}
       <div className="parallax parallax-top ">
         <h1 className="heading no-bg">CONTACT US</h1>
+        
       </div>
 
       {/* Middle Parallax Section (Full Parallax Effect) */}
@@ -91,7 +91,7 @@ export default function ContactUsPage() {
         </div>
 
         {/* Right Column - Contact Form */}
-        <div className="flex-1 bg-black p-6 text-white rounded-lg">
+        <div className="flex-1 bg-black p-6 text-white rounded-lg ml-4">
           <div className="border border-white p-6 max-w-md mx-auto">
             <form className="space-y-6" ref={form} onSubmit={sendEmail}>
               {/* Name Field */}

@@ -110,6 +110,12 @@ export default function Home() {
     "/assets/gallery4.jpeg",
     "/assets/gallery5.jpg",
     "/assets/gallery6.jpg",
+    "/assets/IMG_4490.jpg",
+    "/assets/IMG_4560.jpg",
+    "/assets/IMG_4559_6078.jpg",
+    "/assets/IMG_4551.jpg",
+    "/assets/IMG_4563.jpg",
+
   ];
 
   const sliderSettings = {
