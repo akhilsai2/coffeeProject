@@ -26,12 +26,12 @@ const Navbar = () => {
 
   return (
     <nav
-      className={`fixed md:top-0 top-0  left-[80%] md:left-[37%]    z-50 transition-colors duration-300 my-2 rounded-3xl ${
+      className={`absolute md:fixed md:top-0 top-0  left-[78%] md:left-[37%]    z-50 transition-colors duration-300 my-2 rounded-3xl ${
         isWhiteBackground
-          ? "bg-[#000000] "
+          ? "md:bg-[#000000] "
           : isScrolled
-          ? "bg-[#000000]"
-          : "bg-[#000000ba]"
+          ? "md:bg-[#000000]"
+          : "md:bg-[#000000ba]"
       }`}
     >
       <div

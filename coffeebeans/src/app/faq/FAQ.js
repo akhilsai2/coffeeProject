@@ -85,7 +85,7 @@ export default function AlwaysOpenExample() {
       <h2 className="text-center text-4xl font-bold text-green-800 mb-8">
         Frequently Asked Questions
       </h2>
-      <div className="flex flex-col md:flex-row gap-8 items-start">
+      <div className="flex flex-col md:flex-row gap-8 items-center">
         {/* FAQ Section */}
         <div className="w-full md:w-2/3 flex flex-col items-center gap-6 p-6">
           {faqData.map((item, index) => (
@@ -127,9 +127,9 @@ export default function AlwaysOpenExample() {
         {/* Image Section */}
         <div className="w-full md:w-1/3 flex justify-center">
           <img
-            src="https://images.unsplash.com/photo-1582719478181-2b36f252c3f3?w=500&auto=format&fit=crop&q=60"
+            src="/assets/faq1.jpg"
             alt="FAQ Illustration"
-            className="w-full h-auto max-w-[400px] rounded-lg shadow-lg"
+            className="w-full h-auto max-w-[500px] rounded-lg shadow-lg"
           />
         </div>
       </div>

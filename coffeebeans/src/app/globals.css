@@ -57,3 +57,6 @@ body::-webkit-scrollbar {
 .animate-slide-in {
   animation: slideIn 0.8s ease-out forwards;
 }
+.slick-slider {
+  width: 92% !important;
+}

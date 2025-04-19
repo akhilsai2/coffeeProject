@@ -612,3 +612,6 @@ ul {
     }
   }
 }
+.slick-slide .slick-active .slick-current {
+  border-radius: 50% !important;
+}

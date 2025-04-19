@@ -3,42 +3,33 @@ import Slider from "react-slick";
 import { useInView } from "react-intersection-observer";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import { HiArrowRight } from "react-icons/hi";
 
 const products = [
   {
     id: 1,
     images: ["/assets/product1.jpeg", "/assets/product1-2.jpeg"], // Multiple images
     heading: "Forest Whisper - Araku Pearl",
-    para1: "Organic Specialty Coffee",
-    para2: "SCA Score: 84+",
-    para3: "Region: Araku Valley",
-    button: "Know More",
+    link: "/productDetails/forest-whisper",
   },
   {
     id: 2,
     images: ["/assets/product1.jpeg", "/assets/product1-3.jpeg"], // Multiple images
     heading: "Pearl Reserve - Araku Pearl",
-    para1: "Medium Roast",
-    para2: "SCA Score: 83",
-    para3: "Flavour Profile: Green Pepper, Cherry, Dark Chocolate",
-    button: "Know More",
+    link: "/productDetails/pearl-reserve",
   },
   {
     id: 3,
     images: ["/assets/product1.jpeg", "/assets/product1-2.jpeg"], // Multiple images
     heading: "Pocket Brew - Araku Pearl",
-    para1: "Medium Roast",
-    para2: "SCA Score: 85",
-    para3: "Flavour Profile: Floral, Dates, Citrus, Tropical Fruit",
-    para4: "Altitude: 1200 meters and above",
-    button: "Know More",
+    link: "/productDetails/pocket-brew",
   },
 ];
 
 const ProductCard = ({ product }) => {
   const { ref, inView } = useInView({
     triggerOnce: false, // Trigger animation only once
-    threshold: 0.5, // Trigger when 20% of the element is visible
+    threshold: 0.5, // Trigger when 50% of the element is visible
   });
 
   // Slick carousel settings
@@ -48,7 +39,7 @@ const ProductCard = ({ product }) => {
     speed: 1000,
     slidesToShow: 1,
     slidesToScroll: 1,
-    autoplay: true,
+    autoplay: false,
     autoplaySpeed: 3000,
     arrows: false,
   };
@@ -58,39 +49,44 @@ const ProductCard = ({ product }) => {
       ref={ref}
       className={`transition-transform duration-700 ${
         inView ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"
-      } bg-white shadow-md rounded-lg overflow-hidden hover:shadow-xl hover:scale-105 transition-transform`}
+      } flex flex-col items-center rounded-full`}
     >
       {/* Carousel */}
-      <Slider {...settings}>
-        {product.images.map((image, index) => (
-          <div key={index}>
-            <img
-              src={image}
-              alt={product.heading}
-              className="w-full h-48 object-cover"
-            />
-          </div>
-        ))}
-      </Slider>
-
-      {/* Product Content */}
-      <div className="p-4">
-        <h2 className="text-lg font-bold text-gray-800">{product.heading}</h2>
-        <button className="mt-4 w-full bg-orange-500 text-white py-2 rounded hover:bg-green-700 transition">
-          {product.button}
-        </button>
+      <div className="w-48 h-48 rounded-full overflow-hidden shadow-lg">
+        <Slider {...settings}>
+          {product.images.map((image, index) => (
+            <div key={index} className="rounded-full overflow-hidden">
+              <img
+                src={image}
+                alt={product.heading}
+                className="w-48 h-48 object-cover rounded-full shadow-lg"
+              />
+            </div>
+          ))}
+        </Slider>
       </div>
+
+      {/* Product Name and Link */}
+      <h2 className="mt-4 text-lg font-bold text-gray-800 text-center">
+        {product.heading}
+      </h2>
+      <a
+        href={product.link}
+        className="mt-2 flex items-center text-orange-500 hover:text-green-700 transition font-medium"
+      >
+        Know More <HiArrowRight className="ml-2" size={20} />
+      </a>
     </div>
   );
 };
 
 const ProductPage = () => {
   return (
-    <div className=" bg-white py-10 md:px-10">
-      <h1 className="text-center text-4xl font-bold mb-8 text-green-800">
+    <div className="bg-white py-10 md:px-10">
+      <h1 className="text-center text-4xl font-bold mb-3 md:mb-8 text-green-800">
         Shop Us
       </h1>
-      <p className="text-center text-gray-600 text-lg mb-8 px-4 md:px-20">
+      <p className="text-center text-gray-600 text-[14px] md:text-lg mb-8 px-4 md:px-20 italic">
         At AgroVerse Innovations, we are more than just coffee. We are a
         movement dedicated to promoting organic living and sustainability. From
         premium organic coffee to a wide range of eco-friendly and organic

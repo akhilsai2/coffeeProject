@@ -21,6 +21,9 @@ import {
 } from "react-icons/fa";
 import { useInView } from "react-intersection-observer";
 import FooterSection from "./footer/fooeter";
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
 function AnimatedTimelineElement({
   date,
@@ -31,8 +34,8 @@ function AnimatedTimelineElement({
   image,
 }) {
   const { ref, inView } = useInView({
-    triggerOnce: false, // Trigger animation only once
-    threshold: 0.2, // Trigger when 20% of the element is visible
+    triggerOnce: true, // Trigger animation only once
+    threshold: 0.1, // Trigger when 20% of the element is visible
   });
 
   return (
@@ -100,6 +103,39 @@ export default function Home() {
   const [animateImage, setAnimateImage] = useState(false);
   const sectionRef = useRef(null);
   const [animate, setAnimate] = useState(false);
+  const galleryImages = [
+    "/assets/gallery1.jpeg",
+    "/assets/gallery2.jpeg",
+    "/assets/gallery3.jpeg",
+    "/assets/gallery4.jpeg",
+    "/assets/gallery5.jpg",
+    "/assets/gallery6.jpg",
+  ];
+
+  const sliderSettings = {
+    dots: true,
+    infinite: true,
+    speed: 1000,
+    slidesToShow: 4,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 2000,
+    arrows: false,
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 2,
+        },
+      },
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 1,
+        },
+      },
+    ],
+  };
 
   useEffect(() => {
     setTimeout(() => setAnimate(true), 500);
@@ -232,7 +268,7 @@ export default function Home() {
                   : "translate-x-10 opacity-0"
               }`}
             >
-              <div className="bg-gray-50 rounded-xl shadow-xl p-6 md:p-8 text-center md:text-left h-full">
+              <div className="bg-gray-50 rounded-xl shadow-xl p-6 md:p-8 text-center md:text-left h-full flex flex-col items-center md:items-start">
                 <p className="text-sm md:text-lg text-gray-600 mb-6 italic">
                   “At AgroVerse Innovations, this is more than business—it’s my
                   purpose. Born from the soil that raised me and the stories of
@@ -244,11 +280,23 @@ export default function Home() {
                   just move commodities—we build bridges between tradition and
                   global innovation.”
                 </p>
-                <p className="text-lg text-black font-semibold">
-                  — Yanala Prudhvi Raj
-                  <br />
-                  Founder & CEO, AgroVerse Innovations
-                </p>
+                <div className="flex items-center  mt-4">
+                  {/* Rounded Image */}
+                  <img
+                    src="/assets/ceo.jpg" // Replace with the actual path to the CEO's image
+                    alt="Yanala Prudhvi Raj"
+                    className="w-16 h-16 md:w-20 md:h-20 rounded-full shadow-lg mr-4"
+                  />
+                  {/* CEO Name and Title */}
+                  <div>
+                    <p className="text-lg text-black font-semibold">
+                      — Yanala Prudhvi Raj
+                    </p>
+                    <p className="text-sm text-gray-600">
+                      Founder & CEO, AgroVerse Innovations
+                    </p>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -382,6 +430,26 @@ export default function Home() {
               </p>
             </div>
           </div>
+        </div>
+      </div>
+      {/* Other sections */}
+      <div className="relative w-full">
+        {/* Gallery Section */}
+        <div className="bg-white flex flex-col justify-center items-center py-10">
+          <h2 className="text-center text-4xl font-bold mb-8 text-green-800">
+            Our Gallery
+          </h2>
+          <Slider {...sliderSettings} className="px-6">
+            {galleryImages.map((image, index) => (
+              <div key={index} className="p-4">
+                <img
+                  src={image}
+                  alt={`Gallery Image ${index + 1}`}
+                  className="w-full h-64 object-cover rounded-lg shadow-lg"
+                />
+              </div>
+            ))}
+          </Slider>
         </div>
       </div>
       <AlwaysOpenExample />

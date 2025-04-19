@@ -43,12 +43,12 @@ export default function FooterSection() {
                 </svg>
               </div>
               <span className="text-2xl font-bold text-amber-100">
-                BeanCraft
+                AGROVERSE INNOVATIONS
               </span>
             </div>
-            <p className="text-sm text-amber-200 max-w-xs text-center md:text-left">
-              Artisanal coffee roasters committed to quality beans and
-              exceptional brewing experiences.
+            <p className="text-sm text-amber-200 max-w-xs text-center md:text-left ltalic">
+              Join us in our mission to promote sustainable living and make a
+              positive impact on the planet.
             </p>
           </div>
 
@@ -89,7 +89,7 @@ export default function FooterSection() {
               </a>
             </div>
             <p className="text-xs text-amber-300">
-              Follow us for brewing tips & updates
+              Follow us for products & updates
             </p>
           </div>
         </div>
@@ -100,8 +100,8 @@ export default function FooterSection() {
         {/* Bottom Footer */}
         <div className="flex flex-col md:flex-row justify-between items-center text-sm text-amber-400">
           <p className="text-center md:text-left">
-            &copy; {new Date().getFullYear()} BeanCraft Coffee Roasters. All
-            rights reserved.
+            &copy; {new Date().getFullYear()} Agroverse Innovations. All rights
+            reserved.
           </p>
           <div className="flex space-x-6 mt-4 md:mt-0">
             <a
