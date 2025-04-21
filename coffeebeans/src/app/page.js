@@ -3,6 +3,7 @@
 import React, { useEffect, useState, useRef } from "react";
 import ProductPage from "./product/product";
 // import Gelleryimgs from "./gallerySection/page";
+import { FaArrowDown, FaArrowUp } from "react-icons/fa";
 import AlwaysOpenExample from "./faq/FAQ";
 import {
   VerticalTimeline,
@@ -96,6 +97,51 @@ function AnimatedTimelineElement({
     </div>
   );
 }
+
+
+export const ScrollArrow = () => {
+  const [isAtTop, setIsAtTop] = useState(true);
+  const [isAtBottom, setIsAtBottom] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollTop = window.scrollY;
+      const windowHeight = window.innerHeight;
+      const docHeight = document.body.scrollHeight;
+
+      setIsAtTop(scrollTop < 100);
+      setIsAtBottom(scrollTop + windowHeight >= docHeight - 100);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  const scrollToTop = () => window.scrollTo({ top: 0, behavior: "smooth" });
+  const scrollToNext = () => window.scrollBy({ top: window.innerHeight, behavior: "smooth" });
+
+  return (
+    <div className="fixed bottom-6 right-6 z-50">
+      {!isAtBottom && (
+        <button
+          onClick={scrollToNext}
+          className="bg-amber-800 hover:bg-amber-700 text-white p-3 rounded-full shadow-lg transition"
+        >
+          <FaArrowDown />
+        </button>
+      )}
+      {isAtBottom && (
+        <button
+          onClick={scrollToTop}
+          className="bg-amber-800 hover:bg-amber-700 text-white p-3 rounded-full shadow-lg transition"
+        >
+          <FaArrowUp />
+        </button>
+      )}
+    </div>
+  );
+};
+
 
 export default function Home() {
   const [animateLeftCard, setAnimateLeftCard] = useState(false);
@@ -469,6 +515,7 @@ export default function Home() {
       </div> */}
       <AlwaysOpenExample />
       {/* <Gelleryimgs/> */}
+      <ScrollArrow/>
       <FooterSection />
     </>
   );

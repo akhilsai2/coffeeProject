@@ -45,7 +45,7 @@ export default function FooterSection() {
                 AGROVERSE INNOVATIONS
               </span>
             </div>
-            <p className="text-sm text-amber-200 max-w-xs text-center md:text-left ltalic">
+            <p className="text-[18px] text-amber-200 max-w-xs text-center md:text-left ltalic">
               Join us in our mission to promote sustainable living and make a
               positive impact on the planet.
             </p>
@@ -57,7 +57,7 @@ export default function FooterSection() {
               <a
                 key={item?.id}
                 href={`${item?.link}`}
-                className="text-amber-200 hover:text-white transition-colors duration-300 font-medium relative group"
+                className="text-amber-200 hover:text-white text-[20px] transition-colors duration-300 font-medium relative group"
               >
                 {item?.name}
                 <span className="absolute left-0 bottom-0 w-0 h-0.5 bg-amber-400 transition-all duration-300 group-hover:w-full"></span>
@@ -100,7 +100,7 @@ export default function FooterSection() {
                 <AiFillLinkedin size={18} className="text-amber-100" />
               </a>
             </div>
-            <p className="text-xs text-amber-300">
+            <p className="text-[15px] text-amber-300">
               Follow us for products & updates
             </p>
           </div>
