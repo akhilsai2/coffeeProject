@@ -26,12 +26,12 @@ const Navbar = () => {
 
   return (
     <nav
-      className={`absolute md:fixed md:top-0 top-0  left-[78%] md:left-[37%]    z-50 transition-colors duration-300 my-2 rounded-3xl ${
+      className={`absolute md:fixed md:top-0 top-0  left-[78%] md:left-[35%]    z-50 transition-colors duration-300 my-2 rounded-3xl ${
         isWhiteBackground
           ? "md:bg-[#000000] "
           : isScrolled
           ? "md:bg-[#000000]"
-          : "md:bg-[#000000ba]"
+          : "md:bg-transparent"
       }`}
     >
       <div
@@ -43,9 +43,9 @@ const Navbar = () => {
         {/* Desktop Navigation Links */}
         <div className="hidden md:flex gap-15">
           <span
-            className={`cursor-pointer text-lg font-medium tracking-wide ${
+            className={`cursor-pointer text-lg font-medium tracking-wide hover:underline hover:underline-offset-8 hover:decoration-4 hover:decoration-orange-600 ${
               pathname === "/"
-                ? "bg-white rounded-xl px-10   text-black"
+                ? "rounded-xl px-10 underline underline-offset-8 decoration-4 decoration-orange-600 text-white"
                 : "text-white"
             }`}
             onClick={() => router.push("/")}
@@ -53,9 +53,9 @@ const Navbar = () => {
             Home
           </span>
           <span
-            className={`cursor-pointer text-lg font-medium tracking-wide ${
+            className={`cursor-pointer text-lg font-medium tracking-wide hover:underline hover:underline-offset-8 hover:decoration-4 hover:decoration-orange-600 ${
               pathname === "/about"
-                ? "bg-white rounded-xl px-10   text-black"
+                ? "rounded-xl px-10 underline underline-offset-8 decoration-4 decoration-orange-600 text-white"
                 : "text-white"
             }`}
             onClick={() => router.push("/about")}
@@ -63,9 +63,9 @@ const Navbar = () => {
             About
           </span>
           <span
-            className={`cursor-pointer text-lg font-medium tracking-wide ${
-              pathname === "/productDetails"
-                ? "bg-white rounded-xl px-10   text-black"
+            className={`cursor-pointer text-lg font-medium tracking-wide hover:underline hover:underline-offset-8 hover:decoration-4 hover:decoration-orange-600 ${
+              pathname === "/productsDetails"
+                ? "rounded-xl px-10 underline underline-offset-8 decoration-4 decoration-orange-600 text-white"
                 : "text-white"
             }`}
             onClick={() => router.push("/productsDetails")}
@@ -73,9 +73,9 @@ const Navbar = () => {
             Product
           </span>
           <span
-            className={`cursor-pointer text-lg font-medium tracking-wide ${
+            className={`cursor-pointer text-lg font-medium tracking-wide  hover:underline hover:underline-offset-8 hover:decoration-4 hover:decoration-orange-600 ${
               pathname === "/contactus"
-                ? "bg-white rounded-xl px-10   text-black"
+                ? "rounded-xl px-10 underline underline-offset-8 decoration-4 decoration-orange-600 text-white"
                 : "text-white"
             }`}
             onClick={() => router.push("/contactus")}
@@ -132,7 +132,7 @@ const Navbar = () => {
             <span
               className="cursor-pointer hover:text-orange-500 text-lg font-semibold"
               onClick={() => {
-                router.push("/product");
+                router.push("/productsDetails");
                 setIsMenuOpen(false);
               }}
             >
@@ -141,7 +141,7 @@ const Navbar = () => {
             <span
               className="cursor-pointer hover:text-orange-500 text-lg font-semibold"
               onClick={() => {
-                router.push("/contact");
+                router.push("/contactus");
                 setIsMenuOpen(false);
               }}
             >

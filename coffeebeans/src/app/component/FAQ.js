@@ -39,12 +39,12 @@ const faqData = [
     answer:
       "Yes! One of our core values is transparency. We provide traceability of your coffee back to its origin—right down to the farm it was grown on.",
   },
-  // {
-  //   id: "6",
-  //   question: "Do you ship internationally?",
-  //   answer:
-  //     "Yes, we ship both green and roasted coffee globally. Our logistics partners ensure safe and timely delivery to any part of the world.",
-  // },
+  {
+    id: "6",
+    question: "Do you ship internationally?",
+    answer:
+      "Yes, we ship both green and roasted coffee globally. Our logistics partners ensure safe and timely delivery to any part of the world.",
+  },
   {
     id: "7",
     question: "Do you offer samples for roasters or businesses?",

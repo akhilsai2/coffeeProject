@@ -115,7 +115,6 @@ export default function Home() {
     "/assets/IMG_4559_6078.jpg",
     "/assets/IMG_4551.jpg",
     "/assets/IMG_4563.jpg",
-
   ];
 
   const sliderSettings = {
@@ -179,27 +178,42 @@ export default function Home() {
     <>
       <div className="relative text-center">
         <div className="absolute top-4 left-4 z-10">
-          <img
+          {/* <img
             src="/assets/logo86.png" // Replace with the path to your logo file
             alt="CoffeeLogo"
             className="h-25 w-40 cursor-pointer none"
             onClick={() => (window.location.href = "/")}
-          />
+          /> */}
         </div>
 
         <div className="relative w-full h-0 pb-[56.25%] overflow-hidden">
+          {/* Poster Image */}
+          <img
+            src="/assets/homeimage1.png"
+            alt="Poster"
+            className="absolute top-0 left-0 w-full h-full object-cover"
+            id="posterImage"
+          />
+
+          {/* Video */}
           <video
             className="absolute top-0 left-0 w-full h-full object-cover"
             autoPlay
             loop
             muted
+            poster="/assets/homeimage1.png"
+            onCanPlay={() => {
+              const poster = document.getElementById("posterImage");
+              if (poster) poster.style.display = "none";
+            }}
           >
             <source src="/assets/homevideo4.mp4" type="video/mp4" />
             Your browser does not support the video tag.
           </video>
-          <div className="absolute top-0 left-0 w-full h-full bg-[#00000054] "></div>
-        </div>
 
+          {/* Overlay */}
+          <div className="absolute top-0 left-0 w-full h-full bg-[#00000094]"></div>
+        </div>
         <div
           className={`absolute top-[9%] md:top-[30%] left-1/2 w-[90%] md:w-[50%] transform -translate-x-1/2 -translate-y-1/2 text-white text-center p-0 md:p-4 transition-all duration-500 ${
             animate ? "opacity-100 scale-100" : "opacity-0 scale-90"
@@ -209,7 +223,7 @@ export default function Home() {
             AGROVERSE INNOVATIONS
           </h1>
           <p className="text-[10px] md:text-xl mb-1 md:mb-6">
-            Grow with Purpose, Connect with Integrity, Transform with Power.
+            Grow with Purpose - Connect with Integrity - Transform with Power.
           </p>
           <button
             className="bg-orange-500 text-white px-3 md:px-6 py-1 md:py-3 rounded-lg text-[8px] md:text-lg font-medium hover:bg-orange-600 transition-all"
@@ -245,10 +259,6 @@ export default function Home() {
                   excellence. Every step we take is a step toward fairness,
                   transparency, and a future where nature and commerce thrive in
                   harmony.
-                </p>
-                <p className="text-lg text-black font-semibold">
-                  Join us on this journey to create a better world, one cup of
-                  coffee at a time.
                 </p>
               </div>
             </div>
@@ -288,11 +298,11 @@ export default function Home() {
                 </p>
                 <div className="flex items-center  mt-4">
                   {/* Rounded Image */}
-                  <img
+                  {/* <img
                     src="/assets/ceo.jpg" // Replace with the actual path to the CEO's image
                     alt="Yanala Prudhvi Raj"
                     className="w-16 h-16 md:w-20 md:h-20 rounded-full shadow-lg mr-4"
-                  />
+                  /> */}
                   {/* CEO Name and Title */}
                   <div>
                     <p className="text-lg text-black font-semibold">
@@ -313,7 +323,7 @@ export default function Home() {
           {/* Other sections */}
           <div>
             {/* A Journey of AgroVerse Innovations Section */}
-            <div className="bg-[#4caf5033] py-10">
+            <div className="bg-green-50 py-10">
               <h2 className="text-2xl md:text-5xl font-bold text-center text-green-800 mb-8">
                 A Journey of AgroVerse Innovations
               </h2>
@@ -345,7 +355,7 @@ export default function Home() {
                   date="2024"
                   icon={<FaRocket />}
                   title="Official Launch"
-                  content="AgroVerse Innovations officially launched as a bold platform to empower farmers and connect ethical producers with conscious global buyers."
+                  content="AgroVerse Innovations officially launched  to empower farmers and connect ethical producers with conscious global buyers."
                   isLeft={true}
                   image="/assets/journey3.jpg"
                 />
@@ -365,7 +375,7 @@ export default function Home() {
         </div>
 
         <ProductPage />
-        <div className="bg-[#4caf5033] py-10 mt-10">
+        <div className="bg-green-50 py-10 mt-10">
           <h2 className="text-center text-4xl font-bold mb-8 text-green-800">
             Why Choose Us
           </h2>
@@ -378,9 +388,9 @@ export default function Home() {
               </h3>
               <p className="text-gray-600">
                 Our coffee beans are handpicked from high-altitude organic farms
-                and scored 84+ by the Specialty Coffee Association (SCA). Every
-                batch undergoes rigorous quality checks to ensure a rich, clean,
-                and unforgettable experience.
+                in Araku Valley and scored 84+ by the Specialty Coffee
+                Association (SCA). Every batch undergoes rigorous quality checks
+                to ensure a rich, clean, and unforgettable experience.
               </p>
             </div>
 
@@ -398,7 +408,7 @@ export default function Home() {
             </div>
 
             {/* Feature 3 */}
-            <div className="bg-white shadow-md rounded-lg p-6 text-center hover:shadow-lg transition">
+            {/* <div className="bg-white shadow-md rounded-lg p-6 text-center hover:shadow-lg transition">
               <FaGlobe className="text-green-600 text-5xl mx-auto mb-4" />
               <h3 className="text-xl font-bold text-gray-800 mb-2">
                 Traceable & Transparent
@@ -408,7 +418,7 @@ export default function Home() {
                 system lets you know exactly where your coffee comes from and
                 how it was grown.
               </p>
-            </div>
+            </div> */}
 
             {/* Feature 4 */}
             <div className="bg-white shadow-md rounded-lg p-6 text-center hover:shadow-lg transition">
@@ -439,8 +449,7 @@ export default function Home() {
         </div>
       </div>
       {/* Other sections */}
-      <div className="relative w-full">
-        {/* Gallery Section */}
+      {/* <div className="relative w-full">
         <div className="bg-white flex flex-col justify-center items-center py-10">
           <h2 className="text-center text-4xl font-bold mb-8 text-green-800">
             Our Gallery
@@ -457,7 +466,7 @@ export default function Home() {
             ))}
           </Slider>
         </div>
-      </div>
+      </div> */}
       <AlwaysOpenExample />
       {/* <Gelleryimgs/> */}
       <FooterSection />

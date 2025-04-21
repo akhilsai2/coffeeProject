@@ -1,69 +1,38 @@
+"use client";
 import React from "react";
-import Slider from "react-slick";
-import { useInView } from "react-intersection-observer";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
 import { HiArrowRight } from "react-icons/hi";
 
 const products = [
   {
     id: 1,
-    images: ["/assets/product1.jpeg", "/assets/product1-2.jpeg"], // Multiple images
-    heading: "Forest Whisper - Araku Pearl",
-    link: "/productDetails/forest-whisper",
+    images: ["/assets/product1.jpeg"], // Single image
+    heading: "Araku Pearl",
+    link: "/productsDetails",
   },
   {
     id: 2,
-    images: ["/assets/product1.jpeg", "/assets/product1-3.jpeg"], // Multiple images
-    heading: "Pearl Reserve - Araku Pearl",
-    link: "/productDetails/pearl-reserve",
+    images: ["/assets/product1.jpeg"], // Single image
+    heading: "Araku Refining",
+    link: "/productsDetails",
   },
-  {
-    id: 3,
-    images: ["/assets/product1.jpeg", "/assets/product1-2.jpeg"], // Multiple images
-    heading: "Pocket Brew - Araku Pearl",
-    link: "/productDetails/pocket-brew",
-  },
+  // {
+  //   id: 3,
+  //   images: ["/assets/product1.jpeg"], // Single image
+  //   heading: "Pocket Brew - Araku Pearl",
+  //   link: "/productsDetails",
+  // },
 ];
 
 const ProductCard = ({ product }) => {
-  const { ref, inView } = useInView({
-    triggerOnce: false, // Trigger animation only once
-    threshold: 0.5, // Trigger when 50% of the element is visible
-  });
-
-  // Slick carousel settings
-  const settings = {
-    dots: false,
-    infinite: true,
-    speed: 1000,
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    autoplay: false,
-    autoplaySpeed: 3000,
-    arrows: false,
-  };
-
   return (
-    <div
-      ref={ref}
-      className={`transition-transform duration-700 ${
-        inView ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"
-      } flex flex-col items-center rounded-full`}
-    >
-      {/* Carousel */}
+    <div className="flex flex-col items-center rounded-full">
+      {/* Single Rounded Image */}
       <div className="w-48 h-48 rounded-full overflow-hidden shadow-lg">
-        <Slider {...settings}>
-          {product.images.map((image, index) => (
-            <div key={index} className="rounded-full overflow-hidden">
-              <img
-                src={image}
-                alt={product.heading}
-                className="w-48 h-48 object-cover rounded-full shadow-lg"
-              />
-            </div>
-          ))}
-        </Slider>
+        <img
+          src={product.images[0]} // Display the first image
+          alt={product.heading}
+          className="w-48 h-48 object-cover rounded-full shadow-lg"
+        />
       </div>
 
       {/* Product Name and Link */}
@@ -87,7 +56,7 @@ const ProductPage = () => {
         Shop Us
       </h1>
       <p className="text-center text-gray-600 text-[14px] md:text-lg mb-8 px-4 md:px-20 italic">
-        At AgroVerse Innovations, we are more than just coffee. We are a
+        At AgroVerse Innovations, we are more than just a business - We are a
         movement dedicated to promoting organic living and sustainability. From
         premium organic coffee to a wide range of eco-friendly and organic
         products, we bring you the best nature has to offer. Every product we
@@ -95,7 +64,7 @@ const ProductPage = () => {
         the well-being of our planet. Join us in creating a healthier, greener
         future.
       </p>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 px-5">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8 px-5">
         {products.map((product, index) => (
           <ProductCard key={index} product={product} />
         ))}

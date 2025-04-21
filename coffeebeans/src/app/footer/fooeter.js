@@ -1,9 +1,19 @@
 import React from "react";
 import { BsInstagram } from "react-icons/bs";
-import { AiOutlineYoutube, AiFillLinkedin, AiOutlineWhatsApp } from "react-icons/ai";
+import {
+  AiOutlineYoutube,
+  AiFillLinkedin,
+  AiOutlineWhatsApp,
+} from "react-icons/ai";
 import { FaFacebook } from "react-icons/fa";
+import { GiCrowDive } from "react-icons/gi";
 
-const data = [{ id: 1, name: "Home", lint: "" }, { id: 2, name: "Products", link: "productsDetails" }, { id: 3, name: "About", link: "about" }, { id: 4, name: "Contact", link: "contactus" }]
+const data = [
+  { id: 1, name: "Home", lint: "" },
+  { id: 2, name: "Products", link: "productsDetails" },
+  { id: 3, name: "About", link: "about" },
+  { id: 4, name: "Contact", link: "contactus" },
+];
 
 export default function FooterSection() {
   return (
@@ -27,22 +37,9 @@ export default function FooterSection() {
           <div className="flex flex-col items-center md:items-start space-y-4">
             <div className="flex items-center space-x-3">
               <div className="w-10 h-10 bg-amber-200 rounded-full flex items-center justify-center">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth="2"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  className="text-amber-900 w-6 h-6"
-                >
-                  <path d="M17 8h1a4 4 0 1 1 0 8h-1"></path>
-                  <path d="M3 8h14v9a4 4 0 0 1-4 4H7a4 4 0 0 1-4-4Z"></path>
-                  <line x1="6" y1="2" x2="6" y2="4"></line>
-                  <line x1="10" y1="2" x2="10" y2="4"></line>
-                  <line x1="14" y1="2" x2="14" y2="4"></line>
-                </svg>
+                <div className="text-amber-900 w-6 h-6 text-center flex items-center justify-center rounded-full bg-amber-100">
+                  <p className="font-extrabold">AI</p>
+                </div>
               </div>
               <span className="text-2xl font-bold text-amber-100">
                 AGROVERSE INNOVATIONS
