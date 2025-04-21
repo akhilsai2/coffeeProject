@@ -1,7 +1,6 @@
 "use client";
 import React from "react";
 import { HiArrowRight } from "react-icons/hi";
-
 const products = [
   {
     id: 1,
@@ -39,12 +38,12 @@ const ProductCard = ({ product }) => {
       <h2 className="mt-4 text-lg font-bold text-gray-800 text-center">
         {product.heading}
       </h2>
-      <a
+      {/* <a
         href={product.link}
         className="mt-2 flex items-center text-orange-500 hover:text-green-700 transition font-medium"
       >
         Know More <HiArrowRight className="ml-2" size={20} />
-      </a>
+      </a> */}
     </div>
   );
 };

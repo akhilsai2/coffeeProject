@@ -47,25 +47,12 @@ const AboutPage = () => {
                 From Seeds to Success
               </h3>
               <p className="mb-4">
-                Founded in 2023, Organic Harvest began as a small family farm
-                with a big vision. We started with just 5 acres of land and a
-                commitment to growing food the way nature intended – without
-                harmful pesticides or synthetic fertilizers.
+                AgroVerse Innovations is where tradition meets transformation. We empower Indian farmers by bridging them directly with global markets ering premium, traceable,
+                and ethically sourced organic commodities.<br /> From the lush hills of Araku Valley to roasters and retailers around the world, we deliver more than
+                just products—we deliver purpose. Rooted in sustainability and driven by innovation, we are building a future where agriculture thrives, communities grow, and conscious commerce leads the way.
               </p>
-              <p className="mb-4">
-                Our journey wasn't always easy. Converting conventional farmland
-                to certified organic took time, patience, and a deep
-                understanding of natural farming methods. But we persevered,
-                guided by our belief that everyone deserves access to healthy,
-                sustainable, and delicious food.
-              </p>
-              <p>
-                Today, we're proud to manage over 200 acres of certified organic
-                farmland, supplying fresh produce to communities across the
-                region. Our growth is a testament to the increasing demand for
-                transparent, ecological farming practices and the incredible
-                support of our customers who share our values.
-              </p>
+
+
             </div>
             <div
               className="md:w-1/2 h-96 rounded-lg overflow-hidden"
@@ -158,72 +145,19 @@ const AboutPage = () => {
                 }}
               ></div>
               <div className="p-6 text-center">
-                <h3 className="text-xl font-semibold text-green-800 mb-1">
-                  Yanala Prudhvi Raj
-                </h3>
-                <p className="text-gray-600 mb-4">Founder & Head Farmer</p>
+                <h3 className="text-xl font-semibold text-green-800 mb-1">Yanala Prudhvi Raj</h3>
+                <p className="text-gray-600 mb-4">Founder & CEO</p>
                 <div className="flex justify-center space-x-3">
-                  <a
-                    href="https://www.linkedin.com/company/agroverse-innovations/?viewAsMember=true"
-                    target="_blank"
-                    className="w-8 h-8 rounded-full bg-green-800 text-white flex items-center justify-center hover:bg-green-600 transition-colors"
-                  >
-                    {" "}
-                    <AiFillLinkedin size={18} className="text-amber-100" />
-                  </a>
-                  <a
-                    href="https://www.instagram.com/agroverse.innovations/?igsh=OHJhNTNncGxkdmt3&utm_source=qr#"
-                    target="_blank"
-                    className="w-8 h-8 rounded-full bg-green-800 text-white flex items-center justify-center hover:bg-green-600 transition-colors"
-                  >
-                    <BsInstagram size={18} className="text-amber-100" />
-                  </a>
-                  <a
-                    href="https://wa.me/4917645267316?text=Get%20more%20I%20Information"
-                    target="_blank"
-                    className="w-8 h-8 rounded-full bg-green-800 text-white flex items-center justify-center hover:bg-green-600 transition-colors"
-                  >
-                    <AiOutlineWhatsApp size={18} className="text-amber-100" />
-                  </a>
+                  <a href="https://www.linkedin.com/company/agroverse-innovations/?viewAsMember=true"
+                    target="_blank" className="w-8 h-8 rounded-full bg-green-800 text-white flex items-center justify-center hover:bg-green-600 transition-colors"> <AiFillLinkedin size={18} className="text-amber-100" /></a>
+                  {/* <a href="https://www.instagram.com/agroverse.innovations/?igsh=OHJhNTNncGxkdmt3&utm_source=qr#"
+                    target="_blank" className="w-8 h-8 rounded-full bg-green-800 text-white flex items-center justify-center hover:bg-green-600 transition-colors"><BsInstagram size={18} className="text-amber-100" /></a>
+                  <a href="https://wa.me/4917645267316?text=Get%20more%20I%20Information"
+                    target="_blank" className="w-8 h-8 rounded-full bg-green-800 text-white flex items-center justify-center hover:bg-green-600 transition-colors"><AiOutlineWhatsApp size={18} className="text-amber-100" /></a> */}
                 </div>
               </div>
             </div>
-            {/* <div className="bg-white rounded-lg overflow-hidden shadow-md transition-transform duration-300 hover:-translate-y-2">
-              <div className="h-64 bg-gray-200" style={{backgroundImage: 'url("/images/team2.jpg")', backgroundSize: 'cover', backgroundPosition: 'center'}}></div>
-              <div className="p-6 text-center">
-                <h3 className="text-xl font-semibold text-green-800 mb-1">Michael Chen</h3>
-                <p className="text-gray-600 mb-4">Agricultural Director</p>
-                <div className="flex justify-center space-x-3">
-                  <a href="#" className="w-8 h-8 rounded-full bg-green-800 text-white flex items-center justify-center hover:bg-green-600 transition-colors">f</a>
-                  <a href="#" className="w-8 h-8 rounded-full bg-green-800 text-white flex items-center justify-center hover:bg-green-600 transition-colors">t</a>
-                  <a href="#" className="w-8 h-8 rounded-full bg-green-800 text-white flex items-center justify-center hover:bg-green-600 transition-colors">in</a>
-                </div>
-              </div>
-            </div>
-            <div className="bg-white rounded-lg overflow-hidden shadow-md transition-transform duration-300 hover:-translate-y-2">
-              <div className="h-64 bg-gray-200" style={{backgroundImage: 'url("/images/team3.jpg")', backgroundSize: 'cover', backgroundPosition: 'center'}}></div>
-              <div className="p-6 text-center">
-                <h3 className="text-xl font-semibold text-green-800 mb-1">Emma Rodriguez</h3>
-                <p className="text-gray-600 mb-4">Sustainability Expert</p>
-                <div className="flex justify-center space-x-3">
-                  <a href="#" className="w-8 h-8 rounded-full bg-green-800 text-white flex items-center justify-center hover:bg-green-600 transition-colors">f</a>
-                  <a href="#" className="w-8 h-8 rounded-full bg-green-800 text-white flex items-center justify-center hover:bg-green-600 transition-colors">t</a>
-                  <a href="#" className="w-8 h-8 rounded-full bg-green-800 text-white flex items-center justify-center hover:bg-green-600 transition-colors">in</a>
-                </div>
-              </div>
-            </div>
-            <div className="bg-white rounded-lg overflow-hidden shadow-md transition-transform duration-300 hover:-translate-y-2">
-              <div className="h-64 bg-gray-200" style={{backgroundImage: 'url("/images/team4.jpg")', backgroundSize: 'cover', backgroundPosition: 'center'}}></div>
-              <div className="p-6 text-center">
-                <h3 className="text-xl font-semibold text-green-800 mb-1">David Wilson</h3>
-                <p className="text-gray-600 mb-4">Community Outreach</p>
-                <div className="flex justify-center space-x-3">
-                  <a href="#" className="w-8 h-8 rounded-full bg-green-800 text-white flex items-center justify-center hover:bg-green-600 transition-colors">f</a>
-                  <a href="#" className="w-8 h-8 rounded-full bg-green-800 text-white flex items-center justify-center hover:bg-green-600 transition-colors">t</a>
-                  <a href="#" className="w-8 h-8 rounded-full bg-green-800 text-white flex items-center justify-center hover:bg-green-600 transition-colors">in</a>
-                </div>
-              </div>
-            </div>  */}
+
           </div>
         </div>
       </section>
@@ -233,31 +167,73 @@ const AboutPage = () => {
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-green-800 inline-block relative">
-              What Our Customers Say
+            India’s Pride, World’s Delight - Endorsed by Icons
               <span className="absolute bottom-0 left-1/2 transform -translate-x-1/2 -mb-3 w-1/2 h-1 bg-green-300"></span>
             </h2>
           </div>
-          <div className="max-w-3xl mx-auto">
-            <div className="bg-white p-6 rounded-lg shadow-md mb-6">
-              <p className="text-gray-700 italic mb-4">
-                "I've been a subscriber to Organic Harvest's weekly produce box
-                for over two years now. The quality and freshness of their
-                vegetables is unmatched, and I love knowing exactly where my
-                food comes from!"
-              </p>
-              <div className="font-semibold text-green-800">
-                — Rachel T., Loyal Customer
+          <div className="mx-auto flex flex-col md:flex-row justify-center gap-3">
+            <div className="bg-white p-6 rounded-lg shadow-lg mb-6 max-w-xs">
+              {/* Card Header with Image and Title */}
+              <div className="flex items-center space-x-4 mb-4">
+                {/* Profile Image */}
+                <img
+                  className="w-16 h-16 rounded-full object-cover"
+                  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQLkmcREKjBp7BfHcwfxqFBPc62a0Uy46Hp6g&s"
+                  alt="Person's Image"
+                />
+                {/* Name and Title */}
+                <div>
+                  <h3 className="text-xl font-semibold text-gray-800">Narendra Modi</h3>
+                  <p className="text-sm text-gray-600">Prime Minister of India</p>
+                </div>
+              </div>
+
+              {/* Article Content */}
+              <div className="text-gray-700 text-base mb-4">
+                <p>
+                “If you are a coffee lover from any part of the world, I invite you to taste Araku coffee from Andhra Pradesh. It will leave you speechless.”
+                </p>
               </div>
             </div>
-            <div className="bg-white p-6 rounded-lg shadow-md">
-              <p className="text-gray-700 italic mb-4">
-                "After visiting their farm during one of their community events,
-                I was impressed by their commitment to sustainable practices.
-                You can truly taste the difference in their produce compared to
-                conventional options."
-              </p>
-              <div className="font-semibold text-green-800">
-                — Mark L., Local Chef
+            <div className="bg-white p-6 rounded-lg shadow-lg mb-6 max-w-xs">
+              {/* Card Header with Image and Title */}
+              <div className="flex items-center space-x-4 mb-4">
+                {/* Profile Image */}
+                <img
+                  className="w-16 h-16 rounded-full object-cover"
+                  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQMSerJXa6eLLbl_esUYcoIeY9Uyytyu-Z2fQ&s"
+                  alt="Person's Image"
+                />
+                {/* Name and Title */}
+                <div>
+                  <h3 className="text-xl font-semibold text-gray-800">Chandrababu Naidu</h3>
+                  <p className="text-sm text-gray-600">Chief Minister, Andhra Pradesh, India</p>
+                </div>
+              </div>
+
+              {/* Article Content */}
+              <div className="text-gray-700 text-base mb-4">
+                <p>
+                “Great news for coffee enthusiasts in the Parliament! You can now enjoy a freshly brewed cup of Araku Coffee right on the premises”
+                </p>
+              </div>
+            </div>
+            <div className="bg-white p-6 rounded-lg shadow-lg mb-6 max-w-xs">
+              <div className="flex items-center space-x-4 mb-4">
+                <img
+                  className="w-16 h-16 rounded-full object-cover"
+                  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQW01eCK0HqYrrDI9l_CJuA0TZQkMOv9Kfvtg&s"
+                  alt="Person's Image"
+                />
+                <div>
+                  <h3 className="text-xl font-semibold text-gray-800">Anand Mahindra</h3>
+                  <p className="text-sm text-gray-600">Chairman & Team member, Mahindra Group</p>
+                </div>
+              </div>
+              <div className="text-gray-700 text-base mb-4">
+                <p>
+                " ⁠It just makes me very, very proud. Araku Coffee is the perfect example of ‘The best in the World, Grown in India’"…
+                </p>
               </div>
             </div>
           </div>
