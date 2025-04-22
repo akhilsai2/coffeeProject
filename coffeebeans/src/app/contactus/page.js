@@ -29,14 +29,14 @@ export default function ContactUsPage() {
 
   };
   return (
-    <div className="about-page">
+    <div className="about-page bg-white text-black">
       {/* Top Parallax (short height, no background on heading) */}
       <div className="parallax parallax-top h-100">
         <h1 className="heading no-bg">CONTACT US</h1>
 
       </div>
       {/* Contact Section */}
-      <div className="flex flex-col md:flex-row justify-between text-black items-start max-w-6xl mx-auto py-12 px-6">
+      <div className="flex flex-col md:flex-row justify-center gap-5 text-black items-start max-w-6xl mx-auto py-12 px-6">
         {/* Left Column - Corporate Offices */}
         <div className="flex-1 space-y-5 mb-12 md:mb-0">
           {/* Visakhapatnam Office */}
@@ -76,7 +76,7 @@ export default function ContactUsPage() {
         </div>
 
         {/* Right Column - Contact Form */}
-        <div className="flex-1 bg-green-50 p-6 text-gray-800 rounded-lg ml-4">
+        <div className="flex-1 bg-green-50 p-6 text-gray-800 w-100 rounded-lg ml-4">
           <div className="border border-black-600 rounded-lg p-6 max-w-md mx-auto bg-white">
             <form className="space-y-6" ref={form} onSubmit={sendEmail}>
               {/* Name Field */}
