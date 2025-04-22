@@ -2,11 +2,13 @@
 
 import "../product/product.css"
 import FooterSection from "../footer/fooeter";
-import React, { useRef, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import emailjs from '@emailjs/browser';
 export default function ContactUsPage() {
   const form = useRef();
   const [successMessage, setSuccessMessage] = useState(false);
+  const [isVisible, setIsVisible] = useState(false);
+
   const sendEmail = (e) => {
     e.preventDefault();
 
@@ -28,11 +30,28 @@ export default function ContactUsPage() {
       );
 
   };
+  const headingText = "CONTACT-US";
+  useEffect(() => {
+    setIsVisible(true);
+  }, []);
   return (
     <div className="about-page bg-white ">
       {/* Top Parallax (short height, no background on heading) */}
       <div className="parallax parallax-top h-100">
-        <h1 className="heading no-bg">CONTACT US</h1>
+        {/* <h1 className="heading no-bg">CONTACT US</h1> */}
+        <h1
+          className="text-white fw-bold uppercase text-[18px] md:text-[60px] font"
+        >
+          {headingText.split("").map((char, index) => (
+            <span
+              key={index}
+              className="letter"
+              style={{ animationDelay: `${index * 0.1}s` }}
+            >
+              {char}
+            </span>
+          ))}
+        </h1>
 
       </div>
       {/* Contact Section */}

@@ -4,6 +4,7 @@ import React from "react";
 import { GiCoffeeBeans } from "react-icons/gi";
 import FooterSection from "../footer/fooeter";
 import { BsInstagram } from "react-icons/bs";
+import { BiLogoGmail } from "react-icons/bi";
 import {
   AiOutlineYoutube,
   AiFillLinkedin,
@@ -146,13 +147,15 @@ const AboutPage = () => {
               ></div>
               <div className="p-6 text-center">
                 <h3 className="text-xl font-semibold text-green-800 mb-1">Yanala Prudhvi Raj</h3>
-                <p className="text-gray-600 mb-4">Founder & CEO</p>
+                <p className="text-gray-600 mb-4">Founder & C.E.O</p>
                 <div className="flex justify-center space-x-3">
-                  <a href="https://www.linkedin.com/company/agroverse-innovations/?viewAsMember=true"
+                  <a href="https://www.linkedin.com/in/yanala-prudhvi-raj-119462129?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app "
                     target="_blank" className="w-8 h-8 rounded-full bg-green-800 text-white flex items-center justify-center hover:bg-green-600 transition-colors"> <AiFillLinkedin size={18} className="text-amber-100" /></a>
-                  {/* <a href="https://www.instagram.com/agroverse.innovations/?igsh=OHJhNTNncGxkdmt3&utm_source=qr#"
-                    target="_blank" className="w-8 h-8 rounded-full bg-green-800 text-white flex items-center justify-center hover:bg-green-600 transition-colors"><BsInstagram size={18} className="text-amber-100" /></a>
-                  <a href="https://wa.me/4917645267316?text=Get%20more%20I%20Information"
+                  <a href="mailto:info@agroverseinnovations.com"
+                    className="w-8 h-8 rounded-full bg-green-800 text-white flex items-center justify-center hover:bg-green-600 transition-colors">
+                    <BiLogoGmail size={18} className="text-amber-100" />
+                  </a>
+                  {/* <a href="https://wa.me/4917645267316?text=Get%20more%20I%20Information"
                     target="_blank" className="w-8 h-8 rounded-full bg-green-800 text-white flex items-center justify-center hover:bg-green-600 transition-colors"><AiOutlineWhatsApp size={18} className="text-amber-100" /></a> */}
                 </div>
               </div>
@@ -167,7 +170,7 @@ const AboutPage = () => {
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-green-800 inline-block relative">
-            India’s Pride, World’s Delight - Endorsed by Icons
+              India’s Pride, World’s Delight - Endorsed by Icons
               <span className="absolute bottom-0 left-1/2 transform -translate-x-1/2 -mb-3 w-1/2 h-1 bg-green-300"></span>
             </h2>
           </div>
@@ -191,7 +194,7 @@ const AboutPage = () => {
               {/* Article Content */}
               <div className="text-gray-700 text-base mb-4">
                 <p>
-                “If you are a coffee lover from any part of the world, I invite you to taste Araku coffee from Andhra Pradesh. It will leave you speechless.”
+                  “If you are a coffee lover from any part of the world, I invite you to taste Araku coffee from Andhra Pradesh. It will leave you speechless.”
                 </p>
               </div>
             </div>
@@ -214,7 +217,7 @@ const AboutPage = () => {
               {/* Article Content */}
               <div className="text-gray-700 text-base mb-4">
                 <p>
-                “Great news for coffee enthusiasts in the Parliament! You can now enjoy a freshly brewed cup of Araku Coffee right on the premises”
+                  “Great news for coffee enthusiasts in the Parliament! You can now enjoy a freshly brewed cup of Araku Coffee right on the premises”
                 </p>
               </div>
             </div>
@@ -232,7 +235,7 @@ const AboutPage = () => {
               </div>
               <div className="text-gray-700 text-base mb-4">
                 <p>
-                " ⁠It just makes me very, very proud. Araku Coffee is the perfect example of ‘The best in the World, Grown in India’"…
+                  " ⁠It just makes me very, very proud. Araku Coffee is the perfect example of ‘The best in the World, Grown in India’"…
                 </p>
               </div>
             </div>
