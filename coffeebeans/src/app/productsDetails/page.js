@@ -7,20 +7,22 @@ import product2 from "../../../public/assets/FW1.png"
 import product3 from "../../../public/assets/PearlReserve.png"
 const ProductDetailsPage = () => {
     const [isVisible, setIsVisible] = useState(false);
-    const headingText = "Pocket Brew ( Pearl-Reserve )";
+    const headingText = "Araku-pearl";
     useEffect(() => {
         setIsVisible(true);
     }, []);
     return (
-        <div className="overflow-auto h-screen bg-cover bg-fixed bg-center" >
-            <div className="relative w-full h-[600px]  overflow-hidden" >
+        <div className="overflow-auto bg-white h-screen bg-cover bg-fixed bg-center" >
+            <div className="relative w-full h-[300px]  md:h-[600px] overflow-hidden" >
                 <video className="absolute top-0 left-0 w-full h-full object-cover" autoPlay loop muted>
                     <source src="/assets/homevideo2.mp4" type="video/mp4" />
                     Your browser does not support the video tag.
                 </video>
 
                 <div className="absolute top-0 left-0 w-full h-full  flex items-center justify-center">
-                    <h1 className="text-white fw-bold uppercase" style={{ fontSize: '60px', fontWeight: "500" }}>
+                    <h1
+                        className="text-white fw-bold uppercase text-[20px] md:text-[60px] font-medium"
+                    >
                         {headingText.split("").map((char, index) => (
                             <span
                                 key={index}
@@ -31,6 +33,7 @@ const ProductDetailsPage = () => {
                             </span>
                         ))}
                     </h1>
+
                 </div>
             </div>
             {/* <div className='bg-white'> */}
@@ -45,13 +48,13 @@ const ProductDetailsPage = () => {
                 <div className="relative group w-full text-black flex flex-col items-center justify-center font-bold text-center md:text-left space-y-4 md:space-y-2 p-3 m-2 overflow-hidden">
                     <div className="absolute top-0 left-0 h-[2px] w-0 bg-[#ad6d2f] transition-all duration-500 group-hover:w-10"></div>
 
-          <div className="absolute top-0 right-0 h-[2px] w-0 bg-[#ad6d2f] transition-all duration-500 group-hover:w-10"></div>
-          <div className="absolute bottom-0 left-0 h-[2px] w-0 bg-[#ad6d2f] transition-all duration-500 group-hover:w-10"></div>
-          <div className="absolute bottom-0 right-0 h-[2px] w-0 bg-[#ad6d2f] transition-all duration-500 group-hover:w-10"></div>
-          <div className="absolute top-0 left-0 w-[2px] h-0 bg-[#ad6d2f] transition-all duration-500 group-hover:h-10"></div>
-          <div className="absolute top-0 right-0 w-[2px] h-0 bg-[#ad6d2f] transition-all duration-500 group-hover:h-10"></div>
-          <div className="absolute bottom-0 left-0 w-[2px] h-0 bg-[#ad6d2f] transition-all duration-500 group-hover:h-10"></div>
-          <div className="absolute bottom-0 right-0 w-[2px] h-0 bg-[#ad6d2f] transition-all duration-500 group-hover:h-10"></div>
+                    <div className="absolute top-0 right-0 h-[2px] w-0 bg-[#ad6d2f] transition-all duration-500 group-hover:w-10"></div>
+                    <div className="absolute bottom-0 left-0 h-[2px] w-0 bg-[#ad6d2f] transition-all duration-500 group-hover:w-10"></div>
+                    <div className="absolute bottom-0 right-0 h-[2px] w-0 bg-[#ad6d2f] transition-all duration-500 group-hover:w-10"></div>
+                    <div className="absolute top-0 left-0 w-[2px] h-0 bg-[#ad6d2f] transition-all duration-500 group-hover:h-10"></div>
+                    <div className="absolute top-0 right-0 w-[2px] h-0 bg-[#ad6d2f] transition-all duration-500 group-hover:h-10"></div>
+                    <div className="absolute bottom-0 left-0 w-[2px] h-0 bg-[#ad6d2f] transition-all duration-500 group-hover:h-10"></div>
+                    <div className="absolute bottom-0 right-0 w-[2px] h-0 bg-[#ad6d2f] transition-all duration-500 group-hover:h-10"></div>
 
                     <div className="relative inline-block group">
                         <span className="text-[#80411e]  md:text-[40px] font-semibold">Pocket Brew</span>
@@ -75,17 +78,17 @@ const ProductDetailsPage = () => {
             <div className="flex flex-col md:flex-row items-center justify-between m-3 space-y-5 md:space-y-0 overflow-auto  p-4 rounded-xl shadow-lg transition">
                 {/* Image with Border Radius and Hover Animation */}
 
-        {/* Text with Font Size and Centering */}
-        <div className="relative group bg-white w-full text-black flex flex-col items-center justify-center font-bold text-center md:text-left space-y-4 md:space-y-2 p-3 m-2 overflow-hidden">
-          <div className="absolute top-0 left-0 h-[2px] w-0 bg-[#ad6d2f] transition-all duration-500 group-hover:w-10"></div>
+                {/* Text with Font Size and Centering */}
+                <div className="relative group bg-white w-full text-black flex flex-col items-center justify-center font-bold text-center md:text-left space-y-4 md:space-y-2 p-3 m-2 overflow-hidden">
+                    <div className="absolute top-0 left-0 h-[2px] w-0 bg-[#ad6d2f] transition-all duration-500 group-hover:w-10"></div>
 
-          <div className="absolute top-0 right-0 h-[2px] w-0 bg-[#ad6d2f] transition-all duration-500 group-hover:w-10"></div>
-          <div className="absolute bottom-0 left-0 h-[2px] w-0 bg-[#ad6d2f] transition-all duration-500 group-hover:w-10"></div>
-          <div className="absolute bottom-0 right-0 h-[2px] w-0 bg-[#ad6d2f] transition-all duration-500 group-hover:w-10"></div>
-          <div className="absolute top-0 left-0 w-[2px] h-0 bg-[#ad6d2f] transition-all duration-500 group-hover:h-10"></div>
-          <div className="absolute top-0 right-0 w-[2px] h-0 bg-[#ad6d2f] transition-all duration-500 group-hover:h-10"></div>
-          <div className="absolute bottom-0 left-0 w-[2px] h-0 bg-[#ad6d2f] transition-all duration-500 group-hover:h-10"></div>
-          <div className="absolute bottom-0 right-0 w-[2px] h-0 bg-[#ad6d2f] transition-all duration-500 group-hover:h-10"></div>
+                    <div className="absolute top-0 right-0 h-[2px] w-0 bg-[#ad6d2f] transition-all duration-500 group-hover:w-10"></div>
+                    <div className="absolute bottom-0 left-0 h-[2px] w-0 bg-[#ad6d2f] transition-all duration-500 group-hover:w-10"></div>
+                    <div className="absolute bottom-0 right-0 h-[2px] w-0 bg-[#ad6d2f] transition-all duration-500 group-hover:w-10"></div>
+                    <div className="absolute top-0 left-0 w-[2px] h-0 bg-[#ad6d2f] transition-all duration-500 group-hover:h-10"></div>
+                    <div className="absolute top-0 right-0 w-[2px] h-0 bg-[#ad6d2f] transition-all duration-500 group-hover:h-10"></div>
+                    <div className="absolute bottom-0 left-0 w-[2px] h-0 bg-[#ad6d2f] transition-all duration-500 group-hover:h-10"></div>
+                    <div className="absolute bottom-0 right-0 w-[2px] h-0 bg-[#ad6d2f] transition-all duration-500 group-hover:h-10"></div>
 
                     <div className="relative inline-block group">
                         <span className="text-[#80411e] md:text-[40px] font-semibold">Forest Whisper</span>
@@ -123,13 +126,13 @@ const ProductDetailsPage = () => {
                 <div className="relative group w-full text-black flex flex-col items-center justify-center font-bold text-center md:text-left space-y-4 md:space-y-2 p-3 m-2 overflow-hidden">
                     <div className="absolute top-0 left-0 h-[2px] w-0 bg-[#ad6d2f] transition-all duration-500 group-hover:w-10"></div>
 
-          <div className="absolute top-0 right-0 h-[2px] w-0 bg-[#ad6d2f] transition-all duration-500 group-hover:w-10"></div>
-          <div className="absolute bottom-0 left-0 h-[2px] w-0 bg-[#ad6d2f] transition-all duration-500 group-hover:w-10"></div>
-          <div className="absolute bottom-0 right-0 h-[2px] w-0 bg-[#ad6d2f] transition-all duration-500 group-hover:w-10"></div>
-          <div className="absolute top-0 left-0 w-[2px] h-0 bg-[#ad6d2f] transition-all duration-500 group-hover:h-10"></div>
-          <div className="absolute top-0 right-0 w-[2px] h-0 bg-[#ad6d2f] transition-all duration-500 group-hover:h-10"></div>
-          <div className="absolute bottom-0 left-0 w-[2px] h-0 bg-[#ad6d2f] transition-all duration-500 group-hover:h-10"></div>
-          <div className="absolute bottom-0 right-0 w-[2px] h-0 bg-[#ad6d2f] transition-all duration-500 group-hover:h-10"></div>
+                    <div className="absolute top-0 right-0 h-[2px] w-0 bg-[#ad6d2f] transition-all duration-500 group-hover:w-10"></div>
+                    <div className="absolute bottom-0 left-0 h-[2px] w-0 bg-[#ad6d2f] transition-all duration-500 group-hover:w-10"></div>
+                    <div className="absolute bottom-0 right-0 h-[2px] w-0 bg-[#ad6d2f] transition-all duration-500 group-hover:w-10"></div>
+                    <div className="absolute top-0 left-0 w-[2px] h-0 bg-[#ad6d2f] transition-all duration-500 group-hover:h-10"></div>
+                    <div className="absolute top-0 right-0 w-[2px] h-0 bg-[#ad6d2f] transition-all duration-500 group-hover:h-10"></div>
+                    <div className="absolute bottom-0 left-0 w-[2px] h-0 bg-[#ad6d2f] transition-all duration-500 group-hover:h-10"></div>
+                    <div className="absolute bottom-0 right-0 w-[2px] h-0 bg-[#ad6d2f] transition-all duration-500 group-hover:h-10"></div>
 
                     <div className="relative inline-block group">
                         <span className="text-[#80411e] md:text-[40px] font-semibold">
@@ -152,12 +155,12 @@ const ProductDetailsPage = () => {
                     </div>
                 </div>
             </div>
-{/* </div> */}
+            {/* </div> */}
 
 
-      <FooterSection />
-    </div>
-  );
+            <FooterSection />
+        </div>
+    );
 };
 
 export default ProductDetailsPage;

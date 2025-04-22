@@ -42,13 +42,12 @@ function AnimatedTimelineElement({
   return (
     <div
       ref={ref}
-      className={`transition-transform duration-700 ${
-        inView
+      className={`transition-transform duration-700 ${inView
           ? "translate-x-0 opacity-100"
           : isLeft
-          ? "-translate-x-10 opacity-0"
-          : "translate-x-10 opacity-0"
-      }`}
+            ? "-translate-x-10 opacity-0"
+            : "translate-x-10 opacity-0"
+        }`}
     >
       <VerticalTimelineElement
         className="vertical-timeline-element--work"
@@ -261,15 +260,14 @@ export default function Home() {
           <div className="absolute top-0 left-0 w-full h-full bg-[#00000094]"></div>
         </div>
         <div
-          className={`absolute top-[9%] md:top-[30%] left-1/2 w-[90%] md:w-[50%] transform -translate-x-1/2 -translate-y-1/2 text-white text-center p-0 md:p-4 transition-all duration-500 ${
-            animate ? "opacity-100 scale-100" : "opacity-0 scale-90"
-          }`}
+          className={`absolute top-[9%] md:top-[30%] left-1/2 w-[90%] md:w-[50%] transform -translate-x-1/2 -translate-y-1/2 text-white text-center p-0 md:p-4 transition-all duration-500 ${animate ? "opacity-100 scale-100" : "opacity-0 scale-90"
+            }`}
         >
-          <h1 className="text-[20px] md:text-[55px] font-extrabold  mb-1 md:mb-4 tracking-wide">
+          <h1 className="text-[20px] md:text-[50px] font-extrabold  mb-1 md:mb-4 tracking-wide">
             AGROVERSE INNOVATIONS
           </h1>
           <p className="text-[10px] md:text-xl mb-1 md:mb-6">
-            Grow with Purpose - Connect with Integrity - Transform with Power.
+            GROW | CONNECT | TRANSFORM
           </p>
           <button
             className="bg-orange-500 text-white px-3 md:px-6 py-1 md:py-3 rounded-lg text-[8px] md:text-lg font-medium hover:bg-orange-600 transition-all"
@@ -288,11 +286,10 @@ export default function Home() {
           <div className="bg-white bg-opacity-80 backdrop-blur-sm flex flex-col md:flex-row justify-between items-center w-full px-6 md:px-12 py-10 gap-10 md:gap-6">
             {/* Left Card */}
             <div
-              className={`w-full md:w-1/3 transition-transform duration-700 ${
-                animateLeftCard
+              className={`w-full md:w-1/3 transition-transform duration-700 ${animateLeftCard
                   ? "translate-x-0 opacity-100"
                   : "-translate-x-10 opacity-0"
-              }`}
+                }`}
             >
               <div className="bg-gray-50 rounded-xl shadow-xl p-6 md:p-8 text-center md:text-left h-full">
                 <h2 className="text-3xl md:text-4xl font-bold mb-4 text-green-800">
@@ -311,9 +308,8 @@ export default function Home() {
 
             {/* Image */}
             <div
-              className={`w-full md:w-1/3 flex justify-center transition-transform duration-700 ${
-                animateImage ? "scale-100 opacity-100" : "scale-90 opacity-0"
-              }`}
+              className={`w-full md:w-1/3 flex justify-center transition-transform duration-700 ${animateImage ? "scale-100 opacity-100" : "scale-90 opacity-0"
+                }`}
             >
               <img
                 src="/assets/coffeeplant.jpg"
@@ -324,11 +320,10 @@ export default function Home() {
 
             {/* Right Card */}
             <div
-              className={`w-full md:w-1/3 transition-transform duration-700 ${
-                animateRightCard
+              className={`w-full md:w-1/3 transition-transform duration-700 ${animateRightCard
                   ? "translate-x-0 opacity-100"
                   : "translate-x-10 opacity-0"
-              }`}
+                }`}
             >
               <div className="bg-gray-50 rounded-xl shadow-xl p-6 md:p-8 text-center md:text-left h-full flex flex-col items-center md:items-start">
                 <p className="text-sm md:text-lg text-gray-600 mb-6 italic">
@@ -515,7 +510,7 @@ export default function Home() {
       </div> */}
       <AlwaysOpenExample />
       {/* <Gelleryimgs/> */}
-      <ScrollArrow/>
+      <ScrollArrow />
       <FooterSection />
     </>
   );

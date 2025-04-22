@@ -4,13 +4,13 @@ import { HiArrowRight } from "react-icons/hi";
 const products = [
   {
     id: 1,
-    images: ["/assets/product1.jpeg"], // Single image
+    images: ["/assets/ArakuPearl.png"], // Single image
     heading: "Araku Pearl",
     link: "/productsDetails",
   },
   {
     id: 2,
-    images: ["/assets/product1.jpeg"], // Single image
+    images: ["/assets/ArakuHeal.png"], // Single image
     heading: "Araku Refining",
     link: "/productsDetails",
   },
@@ -24,13 +24,13 @@ const products = [
 
 const ProductCard = ({ product }) => {
   return (
-    <div className="flex flex-col items-center rounded-full">
+    <div className="flex flex-col items-center rounded">
       {/* Single Rounded Image */}
       <div className="w-48 h-48 rounded-full overflow-hidden shadow-lg">
         <img
           src={product.images[0]} // Display the first image
           alt={product.heading}
-          className="w-48 h-48 object-cover rounded-full shadow-lg"
+          className="w-48 h-48 object-cover rounded shadow-lg"
         />
       </div>
 
