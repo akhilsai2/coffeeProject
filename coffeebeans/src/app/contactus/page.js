@@ -29,7 +29,7 @@ export default function ContactUsPage() {
 
   };
   return (
-    <div className="about-page bg-white text-black">
+    <div className="about-page bg-white ">
       {/* Top Parallax (short height, no background on heading) */}
       <div className="parallax parallax-top h-100">
         <h1 className="heading no-bg">CONTACT US</h1>
