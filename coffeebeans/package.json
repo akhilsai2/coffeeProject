@@ -21,7 +21,8 @@
     "react-slick": "^0.30.3",
     "react-vertical-timeline-component": "^3.5.3",
     "sharp": "^0.34.1",
-    "slick-carousel": "^1.8.1"
+    "slick-carousel": "^1.8.1",
+    "swiper": "^11.2.6"
   },
   "devDependencies": {
     "@tailwindcss/postcss": "^4",

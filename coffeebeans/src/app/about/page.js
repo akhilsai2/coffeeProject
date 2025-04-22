@@ -38,22 +38,25 @@ const AboutPage = () => {
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-green-800 inline-block relative">
-              Our Journey
+              About Us
               <span className="absolute bottom-0 left-1/2 transform -translate-x-1/2 -mb-3 w-1/2 h-1 bg-green-300"></span>
             </h2>
           </div>
           <div className="flex flex-col md:flex-row gap-10 items-center">
             <div className="md:w-1/2">
-              <h3 className="text-2xl font-semibold text-green-800 mb-4">
+              <h3 className="text-2xl md:text-3xl font-semibold text-green-800 mb-4 ">
                 From Seeds to Success
               </h3>
-              <p className="mb-4">
-                AgroVerse Innovations is where tradition meets transformation. We empower Indian farmers by bridging them directly with global markets ering premium, traceable,
-                and ethically sourced organic commodities.<br /> From the lush hills of Araku Valley to roasters and retailers around the world, we deliver more than
-                just products—we deliver purpose. Rooted in sustainability and driven by innovation, we are building a future where agriculture thrives, communities grow, and conscious commerce leads the way.
+              <p className="mb-4 text-lg italic text-gray-600">
+                AgroVerse Innovations is where tradition meets transformation.
+                We empower Indian farmers by bridging them directly with global
+                markets—offering premium, traceable, and ethically sourced
+                organic commodities. From the lush hills of Araku Valley to
+                roasters and retailers around the world, we deliver more than
+                just products—we deliver purpose. Rooted in sustainability and
+                driven by innovation, we are building a future where agriculture
+                thrives, communities grow, and conscious commerce leads the way.
               </p>
-
-
             </div>
             <div
               className="md:w-1/2 h-96 rounded-lg overflow-hidden"
@@ -85,7 +88,7 @@ const AboutPage = () => {
               <h3 className="text-xl font-semibold text-green-800 mb-3 text-center">
                 Sustainability
               </h3>
-              <p className="text-gray-600">
+              <p className="text-gray-600 italic">
                 We believe in farming practices that nurture the soil and
                 protect biodiversity. Our regenerative approach ensures we're
                 leaving the land better than we found it for future generations.
@@ -102,7 +105,7 @@ const AboutPage = () => {
               <h3 className="text-xl font-semibold text-green-800 mb-3 text-center">
                 Quality
               </h3>
-              <p className="text-gray-600">
+              <p className="text-gray-600 italic">
                 From seed selection to harvest, we maintain rigorous standards
                 to ensure every product that bears our name is nutritious,
                 flavorful, and grown with care.
@@ -113,7 +116,7 @@ const AboutPage = () => {
               <h3 className="text-xl font-semibold text-green-800 mb-3 text-center">
                 Community
               </h3>
-              <p className="text-gray-600">
+              <p className="text-gray-600 italic">
                 We're building more than just a business – we're cultivating a
                 community of farmers, customers, and partners united by a vision
                 of a healthier food system.
@@ -146,13 +149,23 @@ const AboutPage = () => {
                 }}
               ></div>
               <div className="p-6 text-center">
-                <h3 className="text-xl font-semibold text-green-800 mb-1">Yanala Prudhvi Raj</h3>
+                <h3 className="text-xl font-semibold text-green-800 mb-1">
+                  Yanala Prudhvi Raj
+                </h3>
                 <p className="text-gray-600 mb-4">Founder & C.E.O</p>
                 <div className="flex justify-center space-x-3">
-                  <a href="https://www.linkedin.com/in/yanala-prudhvi-raj-119462129?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app "
-                    target="_blank" className="w-8 h-8 rounded-full bg-green-800 text-white flex items-center justify-center hover:bg-green-600 transition-colors"> <AiFillLinkedin size={18} className="text-amber-100" /></a>
-                  <a href="mailto:info@agroverseinnovations.com"
-                    className="w-8 h-8 rounded-full bg-green-800 text-white flex items-center justify-center hover:bg-green-600 transition-colors">
+                  <a
+                    href="https://www.linkedin.com/in/yanala-prudhvi-raj-119462129?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app "
+                    target="_blank"
+                    className="w-8 h-8 rounded-full bg-green-800 text-white flex items-center justify-center hover:bg-green-600 transition-colors"
+                  >
+                    {" "}
+                    <AiFillLinkedin size={18} className="text-amber-100" />
+                  </a>
+                  <a
+                    href="mailto:info@agroverseinnovations.com"
+                    className="w-8 h-8 rounded-full bg-green-800 text-white flex items-center justify-center hover:bg-green-600 transition-colors"
+                  >
                     <BiLogoGmail size={18} className="text-amber-100" />
                   </a>
                   {/* <a href="https://wa.me/4917645267316?text=Get%20more%20I%20Information"
@@ -160,7 +173,6 @@ const AboutPage = () => {
                 </div>
               </div>
             </div>
-
           </div>
         </div>
       </section>
@@ -186,15 +198,21 @@ const AboutPage = () => {
                 />
                 {/* Name and Title */}
                 <div>
-                  <h3 className="text-xl font-semibold text-gray-800">Narendra Modi</h3>
-                  <p className="text-sm text-gray-600">Prime Minister of India</p>
+                  <h3 className="text-xl font-semibold text-gray-800">
+                    Narendra Modi
+                  </h3>
+                  <p className="text-sm text-gray-600">
+                    Prime Minister of India
+                  </p>
                 </div>
               </div>
 
               {/* Article Content */}
               <div className="text-gray-700 text-base mb-4">
                 <p>
-                  “If you are a coffee lover from any part of the world, I invite you to taste Araku coffee from Andhra Pradesh. It will leave you speechless.”
+                  “If you are a coffee lover from any part of the world, I
+                  invite you to taste Araku coffee from Andhra Pradesh. It will
+                  leave you speechless.”
                 </p>
               </div>
             </div>
@@ -209,15 +227,21 @@ const AboutPage = () => {
                 />
                 {/* Name and Title */}
                 <div>
-                  <h3 className="text-xl font-semibold text-gray-800">Chandrababu Naidu</h3>
-                  <p className="text-sm text-gray-600">Chief Minister, Andhra Pradesh, India</p>
+                  <h3 className="text-xl font-semibold text-gray-800">
+                    Chandrababu Naidu
+                  </h3>
+                  <p className="text-sm text-gray-600">
+                    Chief Minister, Andhra Pradesh, India
+                  </p>
                 </div>
               </div>
 
               {/* Article Content */}
               <div className="text-gray-700 text-base mb-4">
                 <p>
-                  “Great news for coffee enthusiasts in the Parliament! You can now enjoy a freshly brewed cup of Araku Coffee right on the premises”
+                  “Great news for coffee enthusiasts in the Parliament! You can
+                  now enjoy a freshly brewed cup of Araku Coffee right on the
+                  premises”
                 </p>
               </div>
             </div>
@@ -229,13 +253,18 @@ const AboutPage = () => {
                   alt="Person's Image"
                 />
                 <div>
-                  <h3 className="text-xl font-semibold text-gray-800">Anand Mahindra</h3>
-                  <p className="text-sm text-gray-600">Chairman & Team member, Mahindra Group</p>
+                  <h3 className="text-xl font-semibold text-gray-800">
+                    Anand Mahindra
+                  </h3>
+                  <p className="text-sm text-gray-600">
+                    Chairman & Team member, Mahindra Group
+                  </p>
                 </div>
               </div>
               <div className="text-gray-700 text-base mb-4">
                 <p>
-                  " ⁠It just makes me very, very proud. Araku Coffee is the perfect example of ‘The best in the World, Grown in India’"…
+                  " ⁠It just makes me very, very proud. Araku Coffee is the
+                  perfect example of ‘The best in the World, Grown in India’"…
                 </p>
               </div>
             </div>

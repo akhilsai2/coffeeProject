@@ -12,7 +12,7 @@ const products = [
     id: 2,
     images: ["/assets/ArakuHeal.png"], // Single image
     heading: "Araku Refining",
-    link: "/productsDetails",
+    // link: "/productsDetails",
   },
   // {
   //   id: 3,
@@ -38,12 +38,18 @@ const ProductCard = ({ product }) => {
       <h2 className="mt-4 text-lg font-bold text-gray-800 text-center">
         {product.heading}
       </h2>
-      {/* <a
-        href={product.link}
-        className="mt-2 flex items-center text-orange-500 hover:text-green-700 transition font-medium"
-      >
-        Know More <HiArrowRight className="ml-2" size={20} />
-      </a> */}
+      {product.link ? (
+        <a
+          href={product.link}
+          className="mt-2 flex items-center text-orange-500 hover:text-green-700 transition font-medium"
+        >
+          Know More <HiArrowRight className="ml-2" size={20} />
+        </a>
+      ) : (
+        <p className="mt-2 flex items-center text-orange-500 hover:text-green-700 transition font-medium">
+          Know More <HiArrowRight className="ml-2" size={20} />
+        </p>
+      )}
     </div>
   );
 };

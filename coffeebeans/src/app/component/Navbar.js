@@ -22,16 +22,15 @@ const Navbar = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  const isWhiteBackground = pathname === "/about" || pathname === "/product";
-
+  const isWhiteBackground = pathname === "/productsDetails";
   return (
     <nav
-      className={`absolute md:fixed md:top-0 top-0  left-[78%] md:left-[35%]    z-50 transition-colors duration-300 my-2 rounded-3xl ${
+      className={`absolute md:fixed md:top-0 top-0  left-[78%] md:left-[33%]    z-[1000] transition-colors duration-300 my-2 rounded-3xl ${
         isWhiteBackground
-          ? "md:bg-[#000000] "
+          ? "bg-[#000000]"
           : isScrolled
-          ? "md:bg-[#000000]"
-          : "md:bg-transparent"
+          ? "bg-[#000000]"
+          : "bg-transparent"
       }`}
     >
       <div
