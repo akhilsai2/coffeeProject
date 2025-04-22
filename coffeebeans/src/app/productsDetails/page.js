@@ -13,13 +13,13 @@ const ProductDetailsPage = () => {
     }, []);
     return (
         <div className="overflow-auto h-screen bg-cover bg-fixed bg-center" >
-            <div className="relative w-full h-[600px] overflow-hidden">
+            <div className="relative w-full h-[600px]  overflow-hidden" >
                 <video className="absolute top-0 left-0 w-full h-full object-cover" autoPlay loop muted>
                     <source src="/assets/homevideo2.mp4" type="video/mp4" />
                     Your browser does not support the video tag.
                 </video>
 
-                <div className="absolute top-0 left-0 w-full h-full bg-white flex items-center justify-center">
+                <div className="absolute top-0 left-0 w-full h-full  flex items-center justify-center">
                     <h1 className="text-white fw-bold uppercase" style={{ fontSize: '60px', fontWeight: "500" }}>
                         {headingText.split("").map((char, index) => (
                             <span
@@ -34,12 +34,12 @@ const ProductDetailsPage = () => {
                 </div>
             </div>
             {/* <div className='bg-white'> */}
-            <div className="flex flex-col md:flex-row items-center justify-between m-3 space-y-5 md:space-y-0 overflow-auto  p-4 rounded-xl  shadow-lg  transition">
+            <div className="flex flex-col bg-white md:flex-row items-center justify-between m-3 space-y-5 md:space-y-0 overflow-auto  p-4 rounded-xl  shadow-lg  transition">
                 {/* Image with Border Radius and Hover Animation */}
                 <img
                     src={product1.src}
                     alt="Coffee Plant"
-                    className="product-image transition-transform duration-500 hover:scale-105 rounded-tl-[20px] rounded-tr-[10px] rounded-br-[30px] rounded-bl-[5px] m-3"
+                    className="product-image h-50 w-50 transition-transform duration-500 hover:scale-105 rounded-tl-[20px] rounded-tr-[10px] rounded-br-[30px] rounded-bl-[5px] m-3"
                 />
                 {/* Text with Font Size and Centering */}
                 <div className="relative group w-full text-black flex flex-col items-center justify-center font-bold text-center md:text-left space-y-4 md:space-y-2 p-3 m-2 overflow-hidden">
@@ -76,7 +76,7 @@ const ProductDetailsPage = () => {
                 {/* Image with Border Radius and Hover Animation */}
 
         {/* Text with Font Size and Centering */}
-        <div className="relative group w-full text-black flex flex-col items-center justify-center font-bold text-center md:text-left space-y-4 md:space-y-2 p-3 m-2 overflow-hidden">
+        <div className="relative group bg-white w-full text-black flex flex-col items-center justify-center font-bold text-center md:text-left space-y-4 md:space-y-2 p-3 m-2 overflow-hidden">
           <div className="absolute top-0 left-0 h-[2px] w-0 bg-[#ad6d2f] transition-all duration-500 group-hover:w-10"></div>
 
           <div className="absolute top-0 right-0 h-[2px] w-0 bg-[#ad6d2f] transition-all duration-500 group-hover:w-10"></div>
@@ -112,7 +112,7 @@ const ProductDetailsPage = () => {
                 />
             </div>
 
-            <div className="flex flex-col md:flex-row items-center justify-between m-3 space-y-5 md:space-y-0 overflow-auto  p-4 rounded-xl shadow-lg transition">
+            <div className="flex flex-col bg-white md:flex-row items-center justify-between m-3 space-y-5 md:space-y-0 overflow-auto  p-4 rounded-xl shadow-lg transition">
                 {/* Image with Border Radius and Hover Animation */}
                 <img
                     src={product3.src}
