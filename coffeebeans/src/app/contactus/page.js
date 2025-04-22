@@ -37,10 +37,18 @@ export default function ContactUsPage() {
   return (
     <div className="about-page bg-white ">
       {/* Top Parallax (short height, no background on heading) */}
-      <div className="parallax parallax-top h-100">
-        {/* <h1 className="heading no-bg">CONTACT US</h1> */}
+      <section
+        className="relative h-96 flex items-center justify-center text-center text-white"
+        style={{
+          backgroundImage:
+            'linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)), url("/assets/contact.jpg")',
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+        }}
+      >
+        <div className="container mx-auto px-4">
         <h1
-          className="text-white fw-bold uppercase text-[18px] md:text-[60px] font"
+          className="text-white  uppercase text-3xl md:text-[60px] font-bold"
         >
           {headingText.split("").map((char, index) => (
             <span
@@ -52,20 +60,23 @@ export default function ContactUsPage() {
             </span>
           ))}
         </h1>
-
-      </div>
+          {/* <p className="text-lg md:text-xl max-w-2xl mx-auto">
+            Committed to sustainable farming practices, providing organic food for a healthier tomorrow
+          </p> */}
+        </div>
+      </section>
       {/* Contact Section */}
-      <div className="flex flex-col md:flex-row justify-center gap-5 text-black items-start max-w-6xl mx-auto py-12 px-6">
+      <div className="flex flex-col md:flex-row justify-center gap-5 text-black items-center md:items-center  py-5 md:py-12 px-0 md:px-12">
         {/* Left Column - Corporate Offices */}
-        <div className="flex-1 space-y-5 mb-12 md:mb-0">
+        <div className="flex-1 space-y-5 mb-12 md:mb-0 w-100 md:w-1/4">
           {/* Visakhapatnam Office */}
           <div>
-            <h3 className="text-2xl font-bold uppercase tracking-wider text-gray-900 mb-2 underline underline-offset-5 decoration-4 decoration-[#8f755f]">
+            <h3 className="text-3xl md:text-4xl font-bold uppercase tracking-wider text-gray-900 mb-4 underline underline-offset-5 decoration-4 decoration-[#8f755f]">
               CORPORATE OFFICE
             </h3>
             {/* <p className="font-medium text-lg text-amber-800 mb-2"> Germany</p> */}
 
-            <p className="text-1xl font-medium mb-1">AGROVERSE INNOVATIONS</p>
+            <p className="text-1xl md:text-2xl font-medium mb-1">AGROVERSE INNOVATIONS</p>
             <p className="text-lg mb-1">Ewaldstrasse 90c,</p>
             <p className="text-lg mb-1">Berlin, Germany</p>
             <p className="text-lg">12524</p>
@@ -95,8 +106,8 @@ export default function ContactUsPage() {
         </div>
 
         {/* Right Column - Contact Form */}
-        <div className="flex-1 bg-green-50 p-6 text-gray-800 w-100 rounded-lg ml-4">
-          <div className="border border-black-600 rounded-lg p-6 max-w-md mx-auto bg-white">
+        <div className="flex-1  p-6 text-gray-800 w-100 rounded-lg ml-4">
+          <div className="border border-black-600 rounded-lg p-6 max-w-md mx-auto bg-white shaadow-lg">
             <form className="space-y-6" ref={form} onSubmit={sendEmail}>
               {/* Name Field */}
               <div>

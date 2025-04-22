@@ -9,9 +9,9 @@ import { FaFacebook } from "react-icons/fa";
 import { GiCrowDive } from "react-icons/gi";
 
 const data = [
-  { id: 1, name: "Home", lint: "" },
-  { id: 2, name: "Products", link: "productsDetails" },
+  { id: 1, name: "Home", link: "/" },
   { id: 3, name: "About", link: "about" },
+  { id: 2, name: "Products", link: "productsDetails" },
   { id: 4, name: "Contact", link: "contactus" },
 ];
 

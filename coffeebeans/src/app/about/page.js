@@ -10,7 +10,8 @@ import {
   AiFillLinkedin,
   AiOutlineWhatsApp,
 } from "react-icons/ai";
-const AboutPage = () => {
+const AboutPage = () => { 
+  const headingText = "ABOUT-US";
   return (
     <div className="bg-stone-50 text-gray-800 font-sans">
       {/* Header */}
@@ -20,13 +21,25 @@ const AboutPage = () => {
         className="relative h-96 flex items-center justify-center text-center text-white"
         style={{
           backgroundImage:
-            'linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("https://images.unsplash.com/photo-1551882230-8baed57a4f2b?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MzV8fGNvZmZlZSUyMHBsYW50fGVufDB8fDB8fHww")',
+            'linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)), url("https://images.unsplash.com/photo-1551882230-8baed57a4f2b?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MzV8fGNvZmZlZSUyMHBsYW50fGVufDB8fDB8fHww")',
           backgroundSize: "cover",
           backgroundPosition: "center",
         }}
       >
         <div className="container mx-auto px-4">
-          <h1 className="text-4xl md:text-5xl font-bold mb-4">Our Story</h1>
+        <h1
+          className="text-white  uppercase text-3xl md:text-[60px] font-bold"
+        >
+          {headingText.split("").map((char, index) => (
+            <span
+              key={index}
+              className="letter"
+              style={{ animationDelay: `${index * 0.1}s` }}
+            >
+              {char}
+            </span>
+          ))}
+        </h1>
           {/* <p className="text-lg md:text-xl max-w-2xl mx-auto">
             Committed to sustainable farming practices, providing organic food for a healthier tomorrow
           </p> */}
@@ -38,7 +51,7 @@ const AboutPage = () => {
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-green-800 inline-block relative">
-              About Us
+              Our Story
               <span className="absolute bottom-0 left-1/2 transform -translate-x-1/2 -mb-3 w-1/2 h-1 bg-green-300"></span>
             </h2>
           </div>

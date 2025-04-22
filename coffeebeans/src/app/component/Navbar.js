@@ -27,10 +27,10 @@ const Navbar = () => {
     <nav
       className={`absolute md:fixed md:top-0 top-0  left-[78%] md:left-[33%]    z-[1000] transition-colors duration-300 my-2 rounded-3xl ${
         isWhiteBackground
-          ? "bg-[#000000]"
+          ? "md:bg-[#000000]"
           : isScrolled
-          ? "bg-[#000000]"
-          : "bg-transparent"
+          ? "md:bg-[#000000]"
+          : "md:bg-transparent"
       }`}
     >
       <div
