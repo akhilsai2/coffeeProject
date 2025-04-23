@@ -92,7 +92,7 @@ const ProductDetailsPage = () => {
               
               Pocket Brew brings convenience without compromise. Perfect for the
               explorer, traveler, or café on the go, this single-serve drip bag
-              o ers the full-bodied richness of Araku’s specialty coffee wherever
+              offers the full-bodied richness of Araku’s specialty coffee wherever
               you are. Whether you’re on a plane, in a hotel room, or at your
               desk enjoy a balanced and smooth cup without the need for
               equipment. Nitrogen-flushed for freshness and portability, each
@@ -151,7 +151,7 @@ const ProductDetailsPage = () => {
               medium roast from the misty Araku Valley, where the earthy essence
               of the land and the morning mist cultivate rich, bold beans. With
               vibrant notes of green pepper, ripe cherry, and a touch of dark
-              chocolate, this co ee is a comforting invitation to reconnect with
+              chocolate, this coffee is a comforting invitation to reconnect with
               nature’s depth. Each sip offers a harmonious blend of aromatic
               complexity, drawing you into the soul of Araku Valley.
               </span>
@@ -213,13 +213,13 @@ const ProductDetailsPage = () => {
              <p className="text-gray-700 text-md md:text-lg text-justify">
             Description : {" "}
             <span className="font-normal">A true
-              masterpiece of organic co ee, Pearl Reserve is the crowning jewel
+              masterpiece of organic coffee, Pearl Reserve is the crowning jewel
               of Araku Pearl. Grown at altitudes above 1200 meters in
               mineral-rich scree soils, this medium roast reflects the pinnacle
               of artisanal craftsmanship. Floral elegance merges with the
               sweetness of dates, zesty citrus, and a rich tropical depth,
               creating a complex and refined experience. With a combination of
-              washed and natural processes, this co ee o ers a sensory journey
+              washed and natural processes, this coffee offers a sensory journey
               that speaks to the artistry of the land and the purity of nature’s
               finest beans
               </span>

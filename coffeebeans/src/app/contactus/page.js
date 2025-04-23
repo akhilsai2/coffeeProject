@@ -13,8 +13,8 @@ export default function ContactUsPage() {
     e.preventDefault();
 
     emailjs
-      .sendForm('service_ah9d70j', 'template_93dc609', form.current, {
-        publicKey: 'o5Wel34j5KvTSGHfP',
+      .sendForm('service_iuco2od', 'template_aesy2h7', form.current, {
+        publicKey: 'KdiZM3g02n2YV90kJ',
       })
       .then(
         () => {
@@ -30,7 +30,7 @@ export default function ContactUsPage() {
       );
 
   };
-  const headingText = "CONTACT-US";
+  const headingText = "CONTACTUS";
   useEffect(() => {
     setIsVisible(true);
   }, []);
@@ -48,7 +48,7 @@ export default function ContactUsPage() {
       >
         <div className="container mx-auto px-4">
         <h1
-          className="text-white  uppercase text-3xl md:text-[60px] font-bold"
+          className="text-white  uppercase text-3xl md:text-[60px]"
         >
           {headingText.split("").map((char, index) => (
             <span
