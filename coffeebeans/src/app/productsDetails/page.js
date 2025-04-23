@@ -5,7 +5,7 @@ import FooterSection from "../footer/fooeter";
 
 const ProductDetailsPage = () => {
   const [isVisible, setIsVisible] = useState(false);
-  const headingText = "Araku - pearl";
+  const headingText = "Product - Details";
   useEffect(() => {
     setIsVisible(true);
   }, []);
@@ -37,6 +37,10 @@ const ProductDetailsPage = () => {
         </div>
       </div>
       {/* <div className='bg-white'> */}
+      <h2 className="text-center text-2xl md:text-5xl font-bold my-5 md:my-8 text-green-800">
+            ARAKU - PEARL
+          </h2>
+           
       <div className="flex flex-col bg-white md:flex-row items-center justify-between m-3 space-y-5 md:space-y-0 overflow-hidden  p-4 rounded-xl  shadow-lg  transition">
         {/* Image with Border Radius and Hover Animation */}
         <img
@@ -63,19 +67,19 @@ const ProductDetailsPage = () => {
             <span className="absolute left-1/2 bottom-0 w-0 h-[2px] bg-[#8f755f] transition-all duration-500 group-hover:w-full group-hover:left-0"></span>
           </div>
           <div className="flex flex-col items-start justify-start mb-3 gap-1">
-            <h1 className="text-gray-700 text-md md:text-lg">
+            <h1 className="text-gray-700 text-md md:text-lg text-justify">
               Roast Level : {" "}
               <span className="font-normal">
                 Medium to Medium Dark | SCA Score: 82–85
               </span>
             </h1>
-            <h1 className="text-gray-700 text-md md:text-lg">
+            <h1 className="text-gray-700 text-md md:text-lg text-justify">
               Flavour Profile : {""}
               <span className="font-normal">
                 Versatile & Smooth
               </span>{" "}
             </h1>
-            <h1 className="text-gray-700 text-md md:text-lg">
+            <h1 className="text-gray-700 text-md md:text-lg text-justify">
               {" "}
               Altitude : {""}
               <span className="font-normal">
@@ -88,7 +92,7 @@ const ProductDetailsPage = () => {
               
               Pocket Brew brings convenience without compromise. Perfect for the
               explorer, traveler, or café on the go, this single-serve drip bag
-              o ers the full-bodied richness of Araku’s specialty cffee wherever
+              o ers the full-bodied richness of Araku’s specialty coffee wherever
               you are. Whether you’re on a plane, in a hotel room, or at your
               desk enjoy a balanced and smooth cup without the need for
               equipment. Nitrogen-flushed for freshness and portability, each
@@ -122,19 +126,19 @@ const ProductDetailsPage = () => {
             <span className="absolute left-1/2 bottom-0 w-0 h-[2px] bg-[#8f755f] transition-all duration-500 group-hover:w-full group-hover:left-0"></span>
           </div>
           <div className="flex flex-col items-start justify-start mb-3  gap-1">
-            <h1 className="text-gray-700 text-md md:text-lg">
+            <h1 className="text-gray-700 text-md md:text-lg text-justify">
               Roast Level : {" "}
               <span className="font-normal">
                 Medium Roast | SCA Score: 83
               </span>
             </h1>
-            <h1 className="text-gray-700 text-md md:text-lg">
+            <h1 className="text-gray-700 text-md md:text-lg text-justify">
               Flavour Profile : {" "}
               <span className="font-normal">
                 Green Pepper, Cherry, Dark Chocolate
               </span>{" "}
             </h1>
-            <h1 className="text-gray-700 text-md md:text-lg">
+            <h1 className="text-gray-700 text-md md:text-lg text-justify">
               {" "}
               Altitude : {" "}
               <span className="font-normal"> 1000 meters</span>
@@ -187,21 +191,21 @@ const ProductDetailsPage = () => {
             <span className="absolute left-1/2 bottom-0 w-0 h-[2px] bg-[#8f755f] transition-all duration-500 group-hover:w-full group-hover:left-0"></span>
           </div>
           <div className="flex flex-col items-start justify-start mb-3  gap-1">
-            <h1 className="text-gray-700 text-md md:text-lg">
+            <h1 className="text-gray-700 text-md md:text-lg text-justify">
               Roast Level : {" "}
               <span className="font-normal">
                 {" "}
                 Medium Roast | SCA Score: 85
               </span>
             </h1>
-            <h1 className="text-gray-700 text-md md:text-lg">
+            <h1 className="text-gray-700 text-md md:text-lg text-justify">
               Flavour Profile : {" "}
               <span className="font-normal">
                 {" "}
                 Floral, Dates, Citrus, Tropical Fruits
               </span>{" "}
             </h1>
-            <h1 className="text-gray-700 text-md md:text-lg">
+            <h1 className="text-gray-700 text-md md:text-lg text-justify">
               {" "}
               Altitude : {" "}
               <span className="font-normal">1200+ meters</span>

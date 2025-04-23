@@ -272,7 +272,7 @@ export default function Home() {
           </p>
           <button
             className="bg-orange-500 text-white px-3 md:px-6 py-1 md:py-3 rounded-lg text-[8px] md:text-lg font-medium hover:bg-orange-600 transition-all"
-            onClick={() => (window.location.href = "/shop")}
+            onClick={() => (window.location.href = "/productsDetails")}
           >
             Shop Now
           </button>
@@ -420,7 +420,7 @@ export default function Home() {
         </div>
 
         <ProductPage />
-        <div className="bg-green-50 py-10 mt-10">
+        <div className="bg-green-50 py-10 ">
           <h2 className="text-center text-4xl font-bold mb-8 text-green-800">
             Why Choose Us
           </h2>
